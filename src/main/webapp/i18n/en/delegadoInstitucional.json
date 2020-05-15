@@ -1,0 +1,24 @@
+{
+  "ucentralEventosApplicationApp": {
+    "delegadoInstitucional": {
+      "home": {
+        "title": "Delegado Institucionals",
+        "createLabel": "Create a new Delegado Institucional",
+        "createOrEditLabel": "Create or edit a Delegado Institucional",
+        "notFound": "No Delegado Institucionals found"
+      },
+      "created": "A new Delegado Institucional is created with identifier {{ param }}",
+      "updated": "A Delegado Institucional is updated with identifier {{ param }}",
+      "deleted": "A Delegado Institucional is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Delegado Institucional {{ id }}?"
+      },
+      "detail": {
+        "title": "Delegado Institucional"
+      },
+      "codigo": "Codigo",
+      "persona": "Persona",
+      "institucion": "Institucion"
+    }
+  }
+}

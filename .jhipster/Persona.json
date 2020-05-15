@@ -1,0 +1,83 @@
+{
+    "name": "Persona",
+    "fields": [
+        {
+            "fieldName": "nombres",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "apellidos",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroIdenficacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ciudad",
+            "otherEntityRelationshipName": "persona",
+            "relationshipName": "ciudad",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoIdentificacion",
+            "otherEntityRelationshipName": "persona",
+            "relationshipName": "tipoIdentificacion",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "estudiante",
+            "otherEntityRelationshipName": "persona",
+            "relationshipName": "estudiante",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "usuarioUcentral",
+            "otherEntityRelationshipName": "persona",
+            "relationshipName": "usuarioUcentral",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "profesor",
+            "otherEntityRelationshipName": "persona",
+            "relationshipName": "profesor",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "delegadoInstitucional",
+            "otherEntityRelationshipName": "persona",
+            "relationshipName": "delegadoInstitucional",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "evaluador",
+            "otherEntityRelationshipName": "persona",
+            "relationshipName": "evaluador",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200514235900",
+    "entityTableName": "persona",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

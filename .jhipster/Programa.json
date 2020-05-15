@@ -1,0 +1,33 @@
+{
+    "name": "Programa",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "institucion",
+            "otherEntityRelationshipName": "programa",
+            "relationshipName": "institucion",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200515000600",
+    "entityTableName": "programa",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

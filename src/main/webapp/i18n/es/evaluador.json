@@ -1,0 +1,25 @@
+{
+  "ucentralEventosApplicationApp": {
+    "evaluador": {
+      "home": {
+        "title": "Evaluadors",
+        "createLabel": "Crear nuevo Evaluador",
+        "createOrEditLabel": "Crear o editar Evaluador",
+        "notFound": "Ningún Evaluadors encontrado"
+      },
+      "created": "Un nuevo Evaluador ha sido creado con el identificador {{ param }}",
+      "updated": "Un Evaluador ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Evaluador ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Evaluador {{ id }}?"
+      },
+      "detail": {
+        "title": "Evaluador"
+      },
+      "codigo": "Codigo",
+      "activo": "Activo",
+      "persona": "Persona",
+      "ponencia": "Ponencia"
+    }
+  }
+}

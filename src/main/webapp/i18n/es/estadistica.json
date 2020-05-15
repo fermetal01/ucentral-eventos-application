@@ -1,0 +1,26 @@
+{
+  "ucentralEventosApplicationApp": {
+    "estadistica": {
+      "home": {
+        "title": "Estadisticas",
+        "createLabel": "Crear nuevo Estadistica",
+        "createOrEditLabel": "Crear o editar Estadistica",
+        "notFound": "Ningún Estadisticas encontrado"
+      },
+      "created": "Un nuevo Estadistica ha sido creado con el identificador {{ param }}",
+      "updated": "Un Estadistica ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Estadistica ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Estadistica {{ id }}?"
+      },
+      "detail": {
+        "title": "Estadistica"
+      },
+      "nombre": "Nombre",
+      "llave": "Llave",
+      "valor": "Valor",
+      "descripcion": "Descripcion",
+      "evento": "Evento"
+    }
+  }
+}

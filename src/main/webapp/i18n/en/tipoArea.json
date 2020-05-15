@@ -1,0 +1,22 @@
+{
+  "ucentralEventosApplicationApp": {
+    "tipoArea": {
+      "home": {
+        "title": "Tipo Areas",
+        "createLabel": "Create a new Tipo Area",
+        "createOrEditLabel": "Create or edit a Tipo Area",
+        "notFound": "No Tipo Areas found"
+      },
+      "created": "A new Tipo Area is created with identifier {{ param }}",
+      "updated": "A Tipo Area is updated with identifier {{ param }}",
+      "deleted": "A Tipo Area is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tipo Area {{ id }}?"
+      },
+      "detail": {
+        "title": "Tipo Area"
+      },
+      "nombre": "Nombre"
+    }
+  }
+}

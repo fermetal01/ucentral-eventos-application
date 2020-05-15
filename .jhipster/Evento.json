@@ -1,0 +1,80 @@
+{
+    "name": "Evento",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechaInicio",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "fechaFin",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "ubicacion",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ciudad",
+            "otherEntityRelationshipName": "evento",
+            "relationshipName": "ciudad",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "nodo",
+            "otherEntityRelationshipName": "evento",
+            "relationshipName": "nodo",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "areaConocimiento",
+            "otherEntityRelationshipName": "evento",
+            "relationshipName": "areaConocimiento",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "area",
+            "otherEntityRelationshipName": "evento",
+            "relationshipName": "area",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "regla",
+            "otherEntityRelationshipName": "evento",
+            "relationshipName": "regla",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "estadistica",
+            "otherEntityRelationshipName": "evento",
+            "relationshipName": "estadistica",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200515001300",
+    "entityTableName": "evento",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,24 @@
+{
+  "ucentralEventosApplicationApp": {
+    "semillero": {
+      "home": {
+        "title": "Semilleros",
+        "createLabel": "Create a new Semillero",
+        "createOrEditLabel": "Create or edit a Semillero",
+        "notFound": "No Semilleros found"
+      },
+      "created": "A new Semillero is created with identifier {{ param }}",
+      "updated": "A Semillero is updated with identifier {{ param }}",
+      "deleted": "A Semillero is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Semillero {{ id }}?"
+      },
+      "detail": {
+        "title": "Semillero"
+      },
+      "nombre": "Nombre",
+      "profesor": "Profesor",
+      "institucion": "Institucion"
+    }
+  }
+}

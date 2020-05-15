@@ -1,0 +1,24 @@
+{
+  "ucentralEventosApplicationApp": {
+    "usuarioUcentral": {
+      "home": {
+        "title": "Usuario Ucentrals",
+        "createLabel": "Create a new Usuario Ucentral",
+        "createOrEditLabel": "Create or edit a Usuario Ucentral",
+        "notFound": "No Usuario Ucentrals found"
+      },
+      "created": "A new Usuario Ucentral is created with identifier {{ param }}",
+      "updated": "A Usuario Ucentral is updated with identifier {{ param }}",
+      "deleted": "A Usuario Ucentral is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Usuario Ucentral {{ id }}?"
+      },
+      "detail": {
+        "title": "Usuario Ucentral"
+      },
+      "emailUcentral": "Email Ucentral",
+      "user": "User",
+      "persona": "Persona"
+    }
+  }
+}

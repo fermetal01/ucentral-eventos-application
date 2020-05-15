@@ -1,0 +1,38 @@
+{
+    "name": "UsuarioUcentral",
+    "fields": [
+        {
+            "fieldName": "emailUcentral",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "usuarioUcentral",
+            "relationshipName": "user",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "persona",
+            "otherEntityRelationshipName": "usuarioUcentral",
+            "relationshipName": "persona",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200515000100",
+    "entityTableName": "usuario_ucentral",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

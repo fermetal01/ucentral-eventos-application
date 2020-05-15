@@ -1,0 +1,27 @@
+{
+  "ucentralEventosApplicationApp": {
+    "ponencia": {
+      "home": {
+        "title": "Ponencias",
+        "createLabel": "Create a new Ponencia",
+        "createOrEditLabel": "Create or edit a Ponencia",
+        "notFound": "No Ponencias found"
+      },
+      "created": "A new Ponencia is created with identifier {{ param }}",
+      "updated": "A Ponencia is updated with identifier {{ param }}",
+      "deleted": "A Ponencia is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ponencia {{ id }}?"
+      },
+      "detail": {
+        "title": "Ponencia"
+      },
+      "fechaInicio": "Fecha Inicio",
+      "fechaFin": "Fecha Fin",
+      "area": "Area",
+      "evento": "Evento",
+      "proyecto": "Proyecto",
+      "evaluador": "Evaluador"
+    }
+  }
+}

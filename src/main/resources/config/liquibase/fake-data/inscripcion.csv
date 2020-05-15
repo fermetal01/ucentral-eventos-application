@@ -1,0 +1,11 @@
+id;fecha_registro;aprobado_institucion;aprobado_evento
+1;2020-05-14T05:29:24;true;true
+2;2020-05-14T14:48:49;false;true
+3;2020-05-14T02:32:47;true;true
+4;2020-05-14T19:37:43;true;true
+5;2020-05-14T01:36:28;false;false
+6;2020-05-14T07:33:34;false;true
+7;2020-05-14T08:58:03;false;false
+8;2020-05-14T07:55:39;false;true
+9;2020-05-14T06:37:30;false;false
+10;2020-05-14T03:39:20;true;false

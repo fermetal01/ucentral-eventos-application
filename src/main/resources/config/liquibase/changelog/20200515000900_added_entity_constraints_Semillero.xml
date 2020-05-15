@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+        Added the constraints for entity Semillero.
+    -->
+    <changeSet id="20200515000900-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="profesor_id"
+                                 baseTableName="semillero"
+                                 constraintName="fk_semillero_profesor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profesor"/>
+
+        <addForeignKeyConstraint baseColumnNames="institucion_id"
+                                 baseTableName="semillero"
+                                 constraintName="fk_semillero_institucion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="institucion"/>
+
+    </changeSet>
+</databaseChangeLog>

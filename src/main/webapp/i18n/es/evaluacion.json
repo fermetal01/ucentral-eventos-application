@@ -1,0 +1,25 @@
+{
+  "ucentralEventosApplicationApp": {
+    "evaluacion": {
+      "home": {
+        "title": "Evaluacions",
+        "createLabel": "Crear nuevo Evaluacion",
+        "createOrEditLabel": "Crear o editar Evaluacion",
+        "notFound": "Ningún Evaluacions encontrado"
+      },
+      "created": "Un nuevo Evaluacion ha sido creado con el identificador {{ param }}",
+      "updated": "Un Evaluacion ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Evaluacion ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Evaluacion {{ id }}?"
+      },
+      "detail": {
+        "title": "Evaluacion"
+      },
+      "calificacion": "Calificacion",
+      "observaciones": "Observaciones",
+      "ponencia": "Ponencia",
+      "evaluador": "Evaluador"
+    }
+  }
+}

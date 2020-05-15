@@ -1,0 +1,45 @@
+{
+    "name": "Estudiante",
+    "fields": [
+        {
+            "fieldName": "carrera",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "persona",
+            "otherEntityRelationshipName": "estudiante",
+            "relationshipName": "persona",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "programa",
+            "otherEntityRelationshipName": "estudiante",
+            "relationshipName": "programa",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "proyecto",
+            "otherEntityRelationshipName": "estudiante",
+            "relationshipName": "proyecto",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200515000700",
+    "entityTableName": "estudiante",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

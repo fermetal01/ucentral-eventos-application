@@ -1,0 +1,22 @@
+{
+  "ucentralEventosApplicationApp": {
+    "proyectoCategoria": {
+      "home": {
+        "title": "Proyecto Categorias",
+        "createLabel": "Crear nuevo Proyecto Categoria",
+        "createOrEditLabel": "Crear o editar Proyecto Categoria",
+        "notFound": "Ningún Proyecto Categorias encontrado"
+      },
+      "created": "Un nuevo Proyecto Categoria ha sido creado con el identificador {{ param }}",
+      "updated": "Un Proyecto Categoria ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Proyecto Categoria ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Proyecto Categoria {{ id }}?"
+      },
+      "detail": {
+        "title": "Proyecto Categoria"
+      },
+      "nombre": "Nombre"
+    }
+  }
+}

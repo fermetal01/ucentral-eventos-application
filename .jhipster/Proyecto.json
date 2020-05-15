@@ -1,0 +1,55 @@
+{
+    "name": "Proyecto",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechaRegistro",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "proyectoCategoria",
+            "otherEntityRelationshipName": "proyecto",
+            "relationshipName": "categoria",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "areaConocimiento",
+            "otherEntityRelationshipName": "proyecto",
+            "relationshipName": "areaConocimiento",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "semillero",
+            "otherEntityRelationshipName": "proyecto",
+            "relationshipName": "semillero",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "estudiante",
+            "otherEntityRelationshipName": "proyecto",
+            "relationshipName": "estudiante",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200515001000",
+    "entityTableName": "proyecto",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

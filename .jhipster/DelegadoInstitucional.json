@@ -1,0 +1,38 @@
+{
+    "name": "DelegadoInstitucional",
+    "fields": [
+        {
+            "fieldName": "codigo",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "persona",
+            "otherEntityRelationshipName": "delegadoInstitucional",
+            "relationshipName": "persona",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "institucion",
+            "otherEntityRelationshipName": "delegadoInstitucional",
+            "relationshipName": "institucion",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200515001500",
+    "entityTableName": "delegado_institucional",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

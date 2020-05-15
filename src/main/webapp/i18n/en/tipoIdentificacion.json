@@ -1,0 +1,23 @@
+{
+  "ucentralEventosApplicationApp": {
+    "tipoIdentificacion": {
+      "home": {
+        "title": "Tipo Identificacions",
+        "createLabel": "Create a new Tipo Identificacion",
+        "createOrEditLabel": "Create or edit a Tipo Identificacion",
+        "notFound": "No Tipo Identificacions found"
+      },
+      "created": "A new Tipo Identificacion is created with identifier {{ param }}",
+      "updated": "A Tipo Identificacion is updated with identifier {{ param }}",
+      "deleted": "A Tipo Identificacion is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tipo Identificacion {{ id }}?"
+      },
+      "detail": {
+        "title": "Tipo Identificacion"
+      },
+      "nombres": "Nombres",
+      "codigo": "Codigo"
+    }
+  }
+}

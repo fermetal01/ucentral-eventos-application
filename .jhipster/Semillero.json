@@ -1,0 +1,37 @@
+{
+    "name": "Semillero",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "profesor",
+            "otherEntityRelationshipName": "semillero",
+            "relationshipName": "profesor",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "institucion",
+            "otherEntityRelationshipName": "semillero",
+            "relationshipName": "institucion",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200515000900",
+    "entityTableName": "semillero",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Evaluacion",
+    "fields": [
+        {
+            "fieldName": "calificacion",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "observaciones",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "ponencia",
+            "otherEntityRelationshipName": "evaluacion",
+            "relationshipName": "ponencia",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "evaluador",
+            "otherEntityRelationshipName": "evaluacion",
+            "relationshipName": "evaluador",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200515001900",
+    "entityTableName": "evaluacion",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,51 @@
+{
+    "name": "Inscripcion",
+    "fields": [
+        {
+            "fieldName": "fechaRegistro",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "aprobadoInstitucion",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "aprobadoEvento",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "evento",
+            "otherEntityRelationshipName": "inscripcion",
+            "relationshipName": "evento",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "proyecto",
+            "otherEntityRelationshipName": "inscripcion",
+            "relationshipName": "proyecto",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "delegadoInstitucional",
+            "otherEntityRelationshipName": "inscripcion",
+            "relationshipName": "delegado",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200515001400",
+    "entityTableName": "inscripcion",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

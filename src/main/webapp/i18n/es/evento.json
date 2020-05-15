@@ -1,0 +1,31 @@
+{
+  "ucentralEventosApplicationApp": {
+    "evento": {
+      "home": {
+        "title": "Eventos",
+        "createLabel": "Crear nuevo Evento",
+        "createOrEditLabel": "Crear o editar Evento",
+        "notFound": "Ningún Eventos encontrado"
+      },
+      "created": "Un nuevo Evento ha sido creado con el identificador {{ param }}",
+      "updated": "Un Evento ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Evento ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Evento {{ id }}?"
+      },
+      "detail": {
+        "title": "Evento"
+      },
+      "nombre": "Nombre",
+      "fechaInicio": "Fecha Inicio",
+      "fechaFin": "Fecha Fin",
+      "ubicacion": "Ubicacion",
+      "ciudad": "Ciudad",
+      "nodo": "Nodo",
+      "areaConocimiento": "Area Conocimiento",
+      "area": "Area",
+      "regla": "Regla",
+      "estadistica": "Estadistica"
+    }
+  }
+}

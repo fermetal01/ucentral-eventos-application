@@ -1,0 +1,25 @@
+{
+  "ucentralEventosApplicationApp": {
+    "estudiante": {
+      "home": {
+        "title": "Estudiantes",
+        "createLabel": "Create a new Estudiante",
+        "createOrEditLabel": "Create or edit a Estudiante",
+        "notFound": "No Estudiantes found"
+      },
+      "created": "A new Estudiante is created with identifier {{ param }}",
+      "updated": "A Estudiante is updated with identifier {{ param }}",
+      "deleted": "A Estudiante is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Estudiante {{ id }}?"
+      },
+      "detail": {
+        "title": "Estudiante"
+      },
+      "carrera": "Carrera",
+      "persona": "Persona",
+      "programa": "Programa",
+      "proyecto": "Proyecto"
+    }
+  }
+}

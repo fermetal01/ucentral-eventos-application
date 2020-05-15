@@ -1,0 +1,25 @@
+{
+  "ucentralEventosApplicationApp": {
+    "areaConocimiento": {
+      "home": {
+        "title": "Area Conocimientos",
+        "createLabel": "Crear nuevo Area Conocimiento",
+        "createOrEditLabel": "Crear o editar Area Conocimiento",
+        "notFound": "Ningún Area Conocimientos encontrado"
+      },
+      "created": "Un nuevo Area Conocimiento ha sido creado con el identificador {{ param }}",
+      "updated": "Un Area Conocimiento ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Area Conocimiento ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Area Conocimiento {{ id }}?"
+      },
+      "detail": {
+        "title": "Area Conocimiento"
+      },
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "padre": "Padre",
+      "evento": "Evento"
+    }
+  }
+}
