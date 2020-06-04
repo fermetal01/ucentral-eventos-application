@@ -58,7 +58,7 @@ export const Evaluador = (props: IEvaluadorProps) => {
                   </td>
                   <td>{evaluador.codigo}</td>
                   <td>{evaluador.activo ? 'true' : 'false'}</td>
-                  <td>{evaluador.persona ? <Link to={`persona/${evaluador.persona.id}`}>{evaluador.persona.id}</Link> : ''}</td>
+                  <td>{evaluador.persona ? <Link to={`persona/${evaluador.persona.id}`}>{evaluador.persona.nombres+" "+evaluador.persona.apellidos}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${evaluador.id}`} color="info" size="sm">

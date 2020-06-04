@@ -60,7 +60,7 @@ export const AreaConocimiento = (props: IAreaConocimientoProps) => {
                   <td>{areaConocimiento.descripcion}</td>
                   <td>
                     {areaConocimiento.padre ? (
-                      <Link to={`area-conocimiento/${areaConocimiento.padre.id}`}>{areaConocimiento.padre.id}</Link>
+                      <Link to={`area-conocimiento/${areaConocimiento.padre.id}`}>{areaConocimiento.padre.nombre}</Link>
                     ) : (
                       ''
                     )}

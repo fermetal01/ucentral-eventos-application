@@ -59,7 +59,7 @@ export const Programa = (props: IProgramaProps) => {
                   <td>{programa.nombre}</td>
                   <td>{programa.descripcion}</td>
                   <td>
-                    {programa.institucion ? <Link to={`institucion/${programa.institucion.id}`}>{programa.institucion.id}</Link> : ''}
+                    {programa.institucion ? <Link to={`institucion/${programa.institucion.id}`}>{programa.institucion.nombre}</Link> : ''}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

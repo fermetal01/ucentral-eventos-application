@@ -61,7 +61,7 @@ export const DelegadoInstitucional = (props: IDelegadoInstitucionalProps) => {
                   <td>{delegadoInstitucional.codigo}</td>
                   <td>
                     {delegadoInstitucional.persona ? (
-                      <Link to={`persona/${delegadoInstitucional.persona.id}`}>{delegadoInstitucional.persona.id}</Link>
+                      <Link to={`persona/${delegadoInstitucional.persona.id}`}>{delegadoInstitucional.persona.nombres+" "+delegadoInstitucional.persona.apellidos}</Link>
                     ) : (
                       ''
                     )}
@@ -70,7 +70,7 @@ export const DelegadoInstitucional = (props: IDelegadoInstitucionalProps) => {
                     {delegadoInstitucional.institucions
                       ? delegadoInstitucional.institucions.map((val, j) => (
                           <span key={j}>
-                            <Link to={`institucion/${val.id}`}>{val.id}</Link>
+                            <Link to={`institucion/${val.id}`}>{val.nombre}</Link>
                             {j === delegadoInstitucional.institucions.length - 1 ? '' : ', '}
                           </span>
                         ))

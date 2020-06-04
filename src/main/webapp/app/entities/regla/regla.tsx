@@ -70,7 +70,7 @@ export const Regla = (props: IReglaProps) => {
                     {regla.eventos
                       ? regla.eventos.map((val, j) => (
                           <span key={j}>
-                            <Link to={`evento/${val.id}`}>{val.id}</Link>
+                            <Link to={`evento/${val.id}`}>{val.nombre}</Link>
                             {j === regla.eventos.length - 1 ? '' : ', '}
                           </span>
                         ))

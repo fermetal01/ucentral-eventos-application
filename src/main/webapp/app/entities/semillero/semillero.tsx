@@ -57,9 +57,9 @@ export const Semillero = (props: ISemilleroProps) => {
                     </Button>
                   </td>
                   <td>{semillero.nombre}</td>
-                  <td>{semillero.profesor ? <Link to={`profesor/${semillero.profesor.id}`}>{semillero.profesor.id}</Link> : ''}</td>
+                  <td>{semillero.profesor ? <Link to={`profesor/${semillero.profesor.id}`}>{semillero.profesor.persona.nombres+" "+semillero.profesor.persona.apellidos}</Link> : ''}</td>
                   <td>
-                    {semillero.institucion ? <Link to={`institucion/${semillero.institucion.id}`}>{semillero.institucion.id}</Link> : ''}
+                    {semillero.institucion ? <Link to={`institucion/${semillero.institucion.id}`}>{semillero.institucion.nombre}</Link> : ''}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

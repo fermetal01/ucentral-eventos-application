@@ -65,12 +65,12 @@ export const Area = (props: IAreaProps) => {
                   <td>{area.nombre}</td>
                   <td>{area.capacidad}</td>
                   <td>{area.ubicacion}</td>
-                  <td>{area.tipoArea ? <Link to={`tipo-area/${area.tipoArea.id}`}>{area.tipoArea.id}</Link> : ''}</td>
+                  <td>{area.tipoArea ? <Link to={`tipo-area/${area.tipoArea.id}`}>{area.tipoArea.nombre}</Link> : ''}</td>
                   <td>
                     {area.eventos
                       ? area.eventos.map((val, j) => (
                           <span key={j}>
-                            <Link to={`evento/${val.id}`}>{val.id}</Link>
+                            <Link to={`evento/${val.id}`}>{val.nombre}</Link>
                             {j === area.eventos.length - 1 ? '' : ', '}
                           </span>
                         ))

@@ -52,6 +52,12 @@ export const Inscripcion = (props: IInscripcionProps) => {
                   <Translate contentKey="ucentralEventosApplicationApp.inscripcion.proyecto">Proyecto</Translate>
                 </th>
                 <th>
+                  <Translate contentKey="ucentralEventosApplicationApp.institucion.nombre">Institucion</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="ucentralEventosApplicationApp.semillero.nombre">Semillero</Translate>
+                </th>
+                <th>
                   <Translate contentKey="ucentralEventosApplicationApp.inscripcion.delegado">Delegado</Translate>
                 </th>
                 <th />
@@ -70,11 +76,13 @@ export const Inscripcion = (props: IInscripcionProps) => {
                   </td>
                   <td>{inscripcion.aprobadoInstitucion ? 'true' : 'false'}</td>
                   <td>{inscripcion.aprobadoEvento ? 'true' : 'false'}</td>
-                  <td>{inscripcion.evento ? <Link to={`evento/${inscripcion.evento.id}`}>{inscripcion.evento.id}</Link> : ''}</td>
-                  <td>{inscripcion.proyecto ? <Link to={`proyecto/${inscripcion.proyecto.id}`}>{inscripcion.proyecto.id}</Link> : ''}</td>
+                  <td>{inscripcion.evento ? <Link to={`evento/${inscripcion.evento.id}`}>{inscripcion.evento.nombre}</Link> : ''}</td>
+                  <td>{inscripcion.proyecto ? <Link to={`proyecto/${inscripcion.proyecto.id}`}>{inscripcion.proyecto.nombre+" - "+inscripcion.proyecto.semillero.nombre}</Link> : ''}</td>
+                  <td>{inscripcion.proyecto ? <a>{inscripcion.proyecto.semillero.institucion.nombre}</a> : ''}</td>
+                  <td>{inscripcion.proyecto ? <a>{inscripcion.proyecto.semillero.nombre}</a> : ''}</td>
                   <td>
                     {inscripcion.delegado ? (
-                      <Link to={`delegado-institucional/${inscripcion.delegado.id}`}>{inscripcion.delegado.id}</Link>
+                      <Link to={`delegado-institucional/${inscripcion.delegado.id}`}>{inscripcion.delegado.persona.nombres}</Link>
                     ) : (
                       ''
                     )}

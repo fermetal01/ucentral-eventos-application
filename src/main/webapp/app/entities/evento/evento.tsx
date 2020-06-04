@@ -76,13 +76,13 @@ export const Evento = (props: IEventoProps) => {
                     <TextFormat type="date" value={evento.fechaFin} format={APP_DATE_FORMAT} />
                   </td>
                   <td>{evento.ubicacion}</td>
-                  <td>{evento.ciudad ? <Link to={`ciudad/${evento.ciudad.id}`}>{evento.ciudad.id}</Link> : ''}</td>
-                  <td>{evento.nodo ? <Link to={`nodo/${evento.nodo.id}`}>{evento.nodo.id}</Link> : ''}</td>
+                  <td>{evento.ciudad ? <Link to={`ciudad/${evento.ciudad.id}`}>{evento.ciudad.nombre}</Link> : ''}</td>
+                  <td>{evento.nodo ? <Link to={`nodo/${evento.nodo.id}`}>{evento.nodo.nombre}</Link> : ''}</td>
                   <td>
                     {evento.areaConocimientos
                       ? evento.areaConocimientos.map((val, j) => (
                           <span key={j}>
-                            <Link to={`area-conocimiento/${val.id}`}>{val.id}</Link>
+                            <Link to={`area-conocimiento/${val.id}`}>{val.nombre}</Link>
                             {j === evento.areaConocimientos.length - 1 ? '' : ', '}
                           </span>
                         ))

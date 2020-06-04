@@ -54,7 +54,7 @@ export const Ciudad = (props: ICiudadProps) => {
                     </Button>
                   </td>
                   <td>{ciudad.nombre}</td>
-                  <td>{ciudad.departamento ? <Link to={`departamento/${ciudad.departamento.id}`}>{ciudad.departamento.id}</Link> : ''}</td>
+                  <td>{ciudad.departamento ? <Link to={`departamento/${ciudad.departamento.id}`}>{ciudad.departamento.nombre}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${ciudad.id}`} color="info" size="sm">

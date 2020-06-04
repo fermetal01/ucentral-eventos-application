@@ -60,13 +60,13 @@ export const Estudiante = (props: IEstudianteProps) => {
                     </Button>
                   </td>
                   <td>{estudiante.carrera}</td>
-                  <td>{estudiante.persona ? <Link to={`persona/${estudiante.persona.id}`}>{estudiante.persona.id}</Link> : ''}</td>
-                  <td>{estudiante.programa ? <Link to={`programa/${estudiante.programa.id}`}>{estudiante.programa.id}</Link> : ''}</td>
+                  <td>{estudiante.persona ? <Link to={`persona/${estudiante.persona.id}`}>{estudiante.persona.nombres+" "+estudiante.persona.apellidos}</Link> : ''}</td>
+                  <td>{estudiante.programa ? <Link to={`programa/${estudiante.programa.id}`}>{estudiante.programa.nombre}</Link> : ''}</td>
                   <td>
                     {estudiante.proyectos
                       ? estudiante.proyectos.map((val, j) => (
                           <span key={j}>
-                            <Link to={`proyecto/${val.id}`}>{val.id}</Link>
+                            <Link to={`proyecto/${val.id}`}>{val.nombre}</Link>
                             {j === estudiante.proyectos.length - 1 ? '' : ', '}
                           </span>
                         ))

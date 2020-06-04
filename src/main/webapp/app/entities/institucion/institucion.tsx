@@ -67,8 +67,8 @@ export const Institucion = (props: IInstitucionProps) => {
                   <td>
                     <TextFormat type="date" value={institucion.fechaRegistro} format={APP_DATE_FORMAT} />
                   </td>
-                  <td>{institucion.ciudad ? <Link to={`ciudad/${institucion.ciudad.id}`}>{institucion.ciudad.id}</Link> : ''}</td>
-                  <td>{institucion.nodo ? <Link to={`nodo/${institucion.nodo.id}`}>{institucion.nodo.id}</Link> : ''}</td>
+                  <td>{institucion.ciudad ? <Link to={`ciudad/${institucion.ciudad.id}`}>{institucion.ciudad.nombre}</Link> : ''}</td>
+                  <td>{institucion.nodo ? <Link to={`nodo/${institucion.nodo.id}`}>{institucion.nodo.nombre}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${institucion.id}`} color="info" size="sm">

@@ -35,7 +35,7 @@ export const DelegadoInstitucionalDetail = (props: IDelegadoInstitucionalDetailP
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.delegadoInstitucional.persona">Persona</Translate>
           </dt>
-          <dd>{delegadoInstitucionalEntity.persona ? delegadoInstitucionalEntity.persona.id : ''}</dd>
+          <dd>{delegadoInstitucionalEntity.persona ? delegadoInstitucionalEntity.persona.nombres : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.delegadoInstitucional.institucion">Institucion</Translate>
           </dt>
@@ -43,7 +43,7 @@ export const DelegadoInstitucionalDetail = (props: IDelegadoInstitucionalDetailP
             {delegadoInstitucionalEntity.institucions
               ? delegadoInstitucionalEntity.institucions.map((val, i) => (
                   <span key={val.id}>
-                    <a>{val.id}</a>
+                    <a>{val.nombre}</a>
                     {i === delegadoInstitucionalEntity.institucions.length - 1 ? '' : ', '}
                   </span>
                 ))

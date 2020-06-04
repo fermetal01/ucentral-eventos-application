@@ -51,6 +51,9 @@ export const Proyecto = (props: IProyectoProps) => {
                 <th>
                   <Translate contentKey="ucentralEventosApplicationApp.proyecto.semillero">Semillero</Translate>
                 </th>
+                <th>
+                  <Translate contentKey="ucentralEventosApplicationApp.institucion.nombre">Institucion</Translate>
+                </th>
                 <th />
               </tr>
             </thead>
@@ -67,16 +70,17 @@ export const Proyecto = (props: IProyectoProps) => {
                     <TextFormat type="date" value={proyecto.fechaRegistro} format={APP_DATE_FORMAT} />
                   </td>
                   <td>
-                    {proyecto.categoria ? <Link to={`proyecto-categoria/${proyecto.categoria.id}`}>{proyecto.categoria.id}</Link> : ''}
+                    {proyecto.categoria ? <Link to={`proyecto-categoria/${proyecto.categoria.id}`}>{proyecto.categoria.nombre}</Link> : ''}
                   </td>
                   <td>
                     {proyecto.areaConocimiento ? (
-                      <Link to={`area-conocimiento/${proyecto.areaConocimiento.id}`}>{proyecto.areaConocimiento.id}</Link>
+                      <Link to={`area-conocimiento/${proyecto.areaConocimiento.id}`}>{proyecto.areaConocimiento.nombre}</Link>
                     ) : (
                       ''
                     )}
                   </td>
-                  <td>{proyecto.semillero ? <Link to={`semillero/${proyecto.semillero.id}`}>{proyecto.semillero.id}</Link> : ''}</td>
+                  <td>{proyecto.semillero ? <Link to={`semillero/${proyecto.semillero.id}`}>{proyecto.semillero.nombre}</Link> : ''}</td>
+                  <td>{proyecto.semillero ? <a>{proyecto.semillero.institucion.nombre}</a> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${proyecto.id}`} color="info" size="sm">

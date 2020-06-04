@@ -69,10 +69,10 @@ export const Persona = (props: IPersonaProps) => {
                   <td>{persona.apellidos}</td>
                   <td>{persona.numeroIdenficacion}</td>
                   <td>{persona.email}</td>
-                  <td>{persona.ciudad ? <Link to={`ciudad/${persona.ciudad.id}`}>{persona.ciudad.id}</Link> : ''}</td>
+                  <td>{persona.ciudad ? <Link to={`ciudad/${persona.ciudad.id}`}>{persona.ciudad.nombre}</Link> : ''}</td>
                   <td>
                     {persona.tipoIdentificacion ? (
-                      <Link to={`tipo-identificacion/${persona.tipoIdentificacion.id}`}>{persona.tipoIdentificacion.id}</Link>
+                      <Link to={`tipo-identificacion/${persona.tipoIdentificacion.id}`}>{persona.tipoIdentificacion.codigo}</Link>
                     ) : (
                       ''
                     )}

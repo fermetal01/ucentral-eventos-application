@@ -59,7 +59,7 @@ export const UsuarioUcentral = (props: IUsuarioUcentralProps) => {
                   <td>{usuarioUcentral.emailUcentral}</td>
                   <td>{usuarioUcentral.user ? usuarioUcentral.user.id : ''}</td>
                   <td>
-                    {usuarioUcentral.persona ? <Link to={`persona/${usuarioUcentral.persona.id}`}>{usuarioUcentral.persona.id}</Link> : ''}
+                    {usuarioUcentral.persona ? <Link to={`persona/${usuarioUcentral.persona.id}`}>{usuarioUcentral.persona.nombres+" "+usuarioUcentral.persona.apellidos}</Link> : ''}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

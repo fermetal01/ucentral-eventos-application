@@ -71,14 +71,14 @@ export const Ponencia = (props: IPonenciaProps) => {
                   <td>
                     <TextFormat type="date" value={ponencia.fechaFin} format={APP_DATE_FORMAT} />
                   </td>
-                  <td>{ponencia.area ? <Link to={`area/${ponencia.area.id}`}>{ponencia.area.id}</Link> : ''}</td>
-                  <td>{ponencia.evento ? <Link to={`evento/${ponencia.evento.id}`}>{ponencia.evento.id}</Link> : ''}</td>
-                  <td>{ponencia.proyecto ? <Link to={`proyecto/${ponencia.proyecto.id}`}>{ponencia.proyecto.id}</Link> : ''}</td>
+                  <td>{ponencia.area ? <Link to={`area/${ponencia.area.id}`}>{ponencia.area.nombre+" - "+ponencia.area.ubicacion+" - "+ponencia.area.tipoArea.nombre}</Link> : ''}</td>
+                  <td>{ponencia.evento ? <Link to={`evento/${ponencia.evento.id}`}>{ponencia.evento.nombre}</Link> : ''}</td>
+                  <td>{ponencia.proyecto ? <Link to={`proyecto/${ponencia.proyecto.id}`}>{ponencia.proyecto.nombre}</Link> : ''}</td>
                   <td>
                     {ponencia.evaluadors
                       ? ponencia.evaluadors.map((val, j) => (
                           <span key={j}>
-                            <Link to={`evaluador/${val.id}`}>{val.id}</Link>
+                            <Link to={`evaluador/${val.id}`}>{val.persona.nombres+" "+val.persona.apellidos}</Link>
                             {j === ponencia.evaluadors.length - 1 ? '' : ', '}
                           </span>
                         ))

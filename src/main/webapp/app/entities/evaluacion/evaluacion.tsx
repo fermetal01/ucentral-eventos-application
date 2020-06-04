@@ -61,8 +61,8 @@ export const Evaluacion = (props: IEvaluacionProps) => {
                   </td>
                   <td>{evaluacion.calificacion}</td>
                   <td>{evaluacion.observaciones}</td>
-                  <td>{evaluacion.ponencia ? <Link to={`ponencia/${evaluacion.ponencia.id}`}>{evaluacion.ponencia.id}</Link> : ''}</td>
-                  <td>{evaluacion.evaluador ? <Link to={`evaluador/${evaluacion.evaluador.id}`}>{evaluacion.evaluador.id}</Link> : ''}</td>
+                  <td>{evaluacion.ponencia ? <Link to={`ponencia/${evaluacion.ponencia.id}`}>{evaluacion.ponencia.proyecto.nombre}</Link> : ''}</td>
+                  <td>{evaluacion.evaluador ? <Link to={`evaluador/${evaluacion.evaluador.id}`}>{evaluacion.evaluador.persona.nombres+" "+evaluacion.evaluador.persona.apellidos}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${evaluacion.id}`} color="info" size="sm">

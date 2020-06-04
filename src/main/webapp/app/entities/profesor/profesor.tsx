@@ -54,7 +54,7 @@ export const Profesor = (props: IProfesorProps) => {
                     </Button>
                   </td>
                   <td>{profesor.area}</td>
-                  <td>{profesor.persona ? <Link to={`persona/${profesor.persona.id}`}>{profesor.persona.id}</Link> : ''}</td>
+                  <td>{profesor.persona ? <Link to={`persona/${profesor.persona.id}`}>{profesor.persona.nombres+" "+profesor.persona.apellidos}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${profesor.id}`} color="info" size="sm">
