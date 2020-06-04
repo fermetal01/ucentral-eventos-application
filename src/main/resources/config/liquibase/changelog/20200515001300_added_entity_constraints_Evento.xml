@@ -32,5 +32,29 @@
                                  referencedColumnNames="id"
                                  referencedTableName="area_conocimiento"/>
         
+        <addForeignKeyConstraint baseColumnNames="evento_id"
+                                 baseTableName="evento_area"
+                                 constraintName="fk_evento_area_evento_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="evento"/>
+
+        <addForeignKeyConstraint baseColumnNames="area_id"
+                                 baseTableName="evento_area"
+                                 constraintName="fk_evento_area_area_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="area"/>
+        
+        <addForeignKeyConstraint baseColumnNames="evento_id"
+                                 baseTableName="evento_regla"
+                                 constraintName="fk_evento_regla_evento_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="evento"/>
+
+        <addForeignKeyConstraint baseColumnNames="regla_id"
+                                 baseTableName="evento_regla"
+                                 constraintName="fk_evento_regla_regla_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="regla"/>
+        
     </changeSet>
 </databaseChangeLog>

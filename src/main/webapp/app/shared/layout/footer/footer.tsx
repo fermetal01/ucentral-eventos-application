@@ -9,7 +9,7 @@ const Footer = props => (
     <Row>
       <Col md="12">
         <p>
-          <Translate contentKey="footer">Your footer</Translate>
+          <Translate contentKey="footer">Ucentral - Desarrollado por:  Brayan Perez</Translate>
         </p>
       </Col>
     </Row>

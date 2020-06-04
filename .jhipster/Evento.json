@@ -43,27 +43,27 @@
         },
         {
             "relationshipType": "many-to-many",
-            "otherEntityName": "area",
-            "otherEntityRelationshipName": "evento",
-            "relationshipName": "area",
-            "otherEntityField": "id",
-            "ownerSide": false
-        },
-        {
-            "relationshipType": "many-to-many",
-            "otherEntityName": "regla",
-            "otherEntityRelationshipName": "evento",
-            "relationshipName": "regla",
-            "otherEntityField": "id",
-            "ownerSide": false
-        },
-        {
-            "relationshipType": "many-to-many",
             "otherEntityName": "estadistica",
             "otherEntityRelationshipName": "evento",
             "relationshipName": "estadistica",
             "otherEntityField": "id",
             "ownerSide": false
+        },
+        {
+            "relationshipName": "area",
+            "otherEntityName": "area",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "evento"
+        },
+        {
+            "relationshipName": "regla",
+            "otherEntityName": "regla",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "evento"
         }
     ],
     "changelogDate": "20200515001300",
@@ -76,5 +76,7 @@
     "readOnly": false,
     "embedded": false,
     "clientRootFolder": "",
-    "applications": "*"
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "sql"
 }

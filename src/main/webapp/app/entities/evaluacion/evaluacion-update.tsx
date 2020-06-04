@@ -105,7 +105,7 @@ export const EvaluacionUpdate = (props: IEvaluacionUpdateProps) => {
                   {ponencias
                     ? ponencias.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.id + " - " + otherEntity.proyecto.nombre}
                         </option>
                       ))
                     : null}
@@ -120,7 +120,7 @@ export const EvaluacionUpdate = (props: IEvaluacionUpdateProps) => {
                   {evaluadors
                     ? evaluadors.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.persona.nombres+" "+otherEntity.persona.apellidos}
                         </option>
                       ))
                     : null}

@@ -13,12 +13,12 @@ import { INodo } from 'app/shared/model/nodo.model';
 import { getEntities as getNodos } from 'app/entities/nodo/nodo.reducer';
 import { IAreaConocimiento } from 'app/shared/model/area-conocimiento.model';
 import { getEntities as getAreaConocimientos } from 'app/entities/area-conocimiento/area-conocimiento.reducer';
+import { IEstadistica } from 'app/shared/model/estadistica.model';
+import { getEntities as getEstadisticas } from 'app/entities/estadistica/estadistica.reducer';
 import { IArea } from 'app/shared/model/area.model';
 import { getEntities as getAreas } from 'app/entities/area/area.reducer';
 import { IRegla } from 'app/shared/model/regla.model';
 import { getEntities as getReglas } from 'app/entities/regla/regla.reducer';
-import { IEstadistica } from 'app/shared/model/estadistica.model';
-import { getEntities as getEstadisticas } from 'app/entities/estadistica/estadistica.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './evento.reducer';
 import { IEvento } from 'app/shared/model/evento.model';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
@@ -28,14 +28,14 @@ export interface IEventoUpdateProps extends StateProps, DispatchProps, RouteComp
 
 export const EventoUpdate = (props: IEventoUpdateProps) => {
   const [idsareaConocimiento, setIdsareaConocimiento] = useState([]);
+  const [idsarea, setIdsarea] = useState([]);
+  const [idsregla, setIdsregla] = useState([]);
   const [ciudadId, setCiudadId] = useState('0');
   const [nodoId, setNodoId] = useState('0');
-  const [areaId, setAreaId] = useState('0');
-  const [reglaId, setReglaId] = useState('0');
   const [estadisticaId, setEstadisticaId] = useState('0');
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
-  const { eventoEntity, ciudads, nodos, areaConocimientos, areas, reglas, estadisticas, loading, updating } = props;
+  const { eventoEntity, ciudads, nodos, areaConocimientos, estadisticas, areas, reglas, loading, updating } = props;
 
   const handleClose = () => {
     props.history.push('/evento');
@@ -51,9 +51,9 @@ export const EventoUpdate = (props: IEventoUpdateProps) => {
     props.getCiudads();
     props.getNodos();
     props.getAreaConocimientos();
+    props.getEstadisticas();
     props.getAreas();
     props.getReglas();
-    props.getEstadisticas();
   }, []);
 
   useEffect(() => {
@@ -70,7 +70,9 @@ export const EventoUpdate = (props: IEventoUpdateProps) => {
       const entity = {
         ...eventoEntity,
         ...values,
-        areaConocimientos: mapIdList(values.areaConocimientos)
+        areaConocimientos: mapIdList(values.areaConocimientos),
+        areas: mapIdList(values.areas),
+        reglas: mapIdList(values.reglas)
       };
 
       if (isNew) {
@@ -165,7 +167,7 @@ export const EventoUpdate = (props: IEventoUpdateProps) => {
                   <option value="" key="0" />
                   {nodos
                     ? nodos.map(otherEntity => (
-                        <option value={otherEntity.id} key={otherEntity.id}>
+                        <option value={otherEntity.id} key={otherEntity.nombre}>
                           {otherEntity.nombre}
                         </option>
                       ))
@@ -187,6 +189,50 @@ export const EventoUpdate = (props: IEventoUpdateProps) => {
                   <option value="" key="0" />
                   {areaConocimientos
                     ? areaConocimientos.map(otherEntity => (
+                        <option value={otherEntity.id} key={otherEntity.id}>
+                          {otherEntity.nombre}
+                        </option>
+                      ))
+                    : null}
+                </AvInput>
+              </AvGroup>
+              <AvGroup>
+                <Label for="evento-area">
+                  <Translate contentKey="ucentralEventosApplicationApp.evento.area">Area</Translate>
+                </Label>
+                <AvInput
+                  id="evento-area"
+                  type="select"
+                  multiple
+                  className="form-control"
+                  name="areas"
+                  value={eventoEntity.areas && eventoEntity.areas.map(e => e.id)}
+                >
+                  <option value="" key="0" />
+                  {areas
+                    ? areas.map(otherEntity => (
+                        <option value={otherEntity.id} key={otherEntity.id}>
+                          {otherEntity.nombre}
+                        </option>
+                      ))
+                    : null}
+                </AvInput>
+              </AvGroup>
+              <AvGroup>
+                <Label for="evento-regla">
+                  <Translate contentKey="ucentralEventosApplicationApp.evento.regla">Regla</Translate>
+                </Label>
+                <AvInput
+                  id="evento-regla"
+                  type="select"
+                  multiple
+                  className="form-control"
+                  name="reglas"
+                  value={eventoEntity.reglas && eventoEntity.reglas.map(e => e.id)}
+                >
+                  <option value="" key="0" />
+                  {reglas
+                    ? reglas.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
                           {otherEntity.nombre}
                         </option>
@@ -219,9 +265,9 @@ const mapStateToProps = (storeState: IRootState) => ({
   ciudads: storeState.ciudad.entities,
   nodos: storeState.nodo.entities,
   areaConocimientos: storeState.areaConocimiento.entities,
+  estadisticas: storeState.estadistica.entities,
   areas: storeState.area.entities,
   reglas: storeState.regla.entities,
-  estadisticas: storeState.estadistica.entities,
   eventoEntity: storeState.evento.entity,
   loading: storeState.evento.loading,
   updating: storeState.evento.updating,
@@ -232,9 +278,9 @@ const mapDispatchToProps = {
   getCiudads,
   getNodos,
   getAreaConocimientos,
+  getEstadisticas,
   getAreas,
   getReglas,
-  getEstadisticas,
   getEntity,
   updateEntity,
   createEntity,

@@ -17,13 +17,13 @@ import java.util.Optional;
 @Repository
 public interface EventoRepository extends JpaRepository<Evento, Long> {
 
-    @Query(value = "select distinct evento from Evento evento left join fetch evento.areaConocimientos",
+    @Query(value = "select distinct evento from Evento evento left join fetch evento.areaConocimientos left join fetch evento.areas left join fetch evento.reglas",
         countQuery = "select count(distinct evento) from Evento evento")
     Page<Evento> findAllWithEagerRelationships(Pageable pageable);
 
-    @Query("select distinct evento from Evento evento left join fetch evento.areaConocimientos")
+    @Query("select distinct evento from Evento evento left join fetch evento.areaConocimientos left join fetch evento.areas left join fetch evento.reglas")
     List<Evento> findAllWithEagerRelationships();
 
-    @Query("select evento from Evento evento left join fetch evento.areaConocimientos where evento.id =:id")
+    @Query("select evento from Evento evento left join fetch evento.areaConocimientos left join fetch evento.areas left join fetch evento.reglas where evento.id =:id")
     Optional<Evento> findOneWithEagerRelationships(@Param("id") Long id);
 }

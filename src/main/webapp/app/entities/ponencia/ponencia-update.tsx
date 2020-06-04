@@ -131,7 +131,7 @@ export const PonenciaUpdate = (props: IPonenciaUpdateProps) => {
                   {areas
                     ? areas.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -146,7 +146,7 @@ export const PonenciaUpdate = (props: IPonenciaUpdateProps) => {
                   {eventos
                     ? eventos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -161,7 +161,7 @@ export const PonenciaUpdate = (props: IPonenciaUpdateProps) => {
                   {proyectos
                     ? proyectos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.semillero.institucion.nombre + " - " + otherEntity.semillero.nombre + " - " +otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -183,7 +183,7 @@ export const PonenciaUpdate = (props: IPonenciaUpdateProps) => {
                   {evaluadors
                     ? evaluadors.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.persona.nombres+" "+otherEntity.persona.apellidos}
                         </option>
                       ))
                     : null}

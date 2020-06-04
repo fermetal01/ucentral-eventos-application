@@ -126,7 +126,7 @@ export const InscripcionUpdate = (props: IInscripcionUpdateProps) => {
                   {eventos
                     ? eventos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -141,7 +141,7 @@ export const InscripcionUpdate = (props: IInscripcionUpdateProps) => {
                   {proyectos
                     ? proyectos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.semillero.institucion.nombre + " - " + otherEntity.semillero.nombre + " - " + otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -156,7 +156,7 @@ export const InscripcionUpdate = (props: IInscripcionUpdateProps) => {
                   {delegadoInstitucionals
                     ? delegadoInstitucionals.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.persona.nombres+" "+otherEntity.persona.apellidos}
                         </option>
                       ))
                     : null}

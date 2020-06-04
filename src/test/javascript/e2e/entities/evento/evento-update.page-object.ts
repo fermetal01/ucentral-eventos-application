@@ -11,6 +11,8 @@ export default class EventoUpdatePage {
   ciudadSelect: ElementFinder = element(by.css('select#evento-ciudad'));
   nodoSelect: ElementFinder = element(by.css('select#evento-nodo'));
   areaConocimientoSelect: ElementFinder = element(by.css('select#evento-areaConocimiento'));
+  areaSelect: ElementFinder = element(by.css('select#evento-area'));
+  reglaSelect: ElementFinder = element(by.css('select#evento-regla'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -103,6 +105,44 @@ export default class EventoUpdatePage {
 
   async getAreaConocimientoSelectedOption() {
     return this.areaConocimientoSelect.element(by.css('option:checked')).getText();
+  }
+
+  async areaSelectLastOption() {
+    await this.areaSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
+  }
+
+  async areaSelectOption(option) {
+    await this.areaSelect.sendKeys(option);
+  }
+
+  getAreaSelect() {
+    return this.areaSelect;
+  }
+
+  async getAreaSelectedOption() {
+    return this.areaSelect.element(by.css('option:checked')).getText();
+  }
+
+  async reglaSelectLastOption() {
+    await this.reglaSelect
+      .all(by.tagName('option'))
+      .last()
+      .click();
+  }
+
+  async reglaSelectOption(option) {
+    await this.reglaSelect.sendKeys(option);
+  }
+
+  getReglaSelect() {
+    return this.reglaSelect;
+  }
+
+  async getReglaSelectedOption() {
+    return this.reglaSelect.element(by.css('option:checked')).getText();
   }
 
   async save() {

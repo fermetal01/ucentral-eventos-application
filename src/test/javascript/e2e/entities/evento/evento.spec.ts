@@ -72,6 +72,8 @@ describe('Evento e2e test', () => {
     await eventoUpdatePage.ciudadSelectLastOption();
     await eventoUpdatePage.nodoSelectLastOption();
     // eventoUpdatePage.areaConocimientoSelectLastOption();
+    // eventoUpdatePage.areaSelectLastOption();
+    // eventoUpdatePage.reglaSelectLastOption();
     await waitUntilDisplayed(eventoUpdatePage.saveButton);
     await eventoUpdatePage.save();
     await waitUntilHidden(eventoUpdatePage.saveButton);

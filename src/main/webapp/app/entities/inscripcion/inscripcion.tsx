@@ -82,7 +82,7 @@ export const Inscripcion = (props: IInscripcionProps) => {
                   <td>{inscripcion.proyecto ? <a>{inscripcion.proyecto.semillero.nombre}</a> : ''}</td>
                   <td>
                     {inscripcion.delegado ? (
-                      <Link to={`delegado-institucional/${inscripcion.delegado.id}`}>{inscripcion.delegado.persona.nombres}</Link>
+                      <Link to={`delegado-institucional/${inscripcion.delegado.id}`}>{inscripcion.delegado.persona.nombres+" "+inscripcion.delegado.persona.apellidos}</Link>
                     ) : (
                       ''
                     )}

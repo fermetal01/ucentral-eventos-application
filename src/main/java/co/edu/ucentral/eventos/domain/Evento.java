@@ -57,17 +57,21 @@ public class Evento implements Serializable {
     @ManyToMany(mappedBy = "eventos")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     @JsonIgnore
+    private Set<Estadistica> estadisticas = new HashSet<>();
+
+    @ManyToMany
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    @JoinTable(name = "evento_area",
+               joinColumns = @JoinColumn(name = "evento_id", referencedColumnName = "id"),
+               inverseJoinColumns = @JoinColumn(name = "area_id", referencedColumnName = "id"))
     private Set<Area> areas = new HashSet<>();
 
-    @ManyToMany(mappedBy = "eventos")
+    @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JsonIgnore
+    @JoinTable(name = "evento_regla",
+               joinColumns = @JoinColumn(name = "evento_id", referencedColumnName = "id"),
+               inverseJoinColumns = @JoinColumn(name = "regla_id", referencedColumnName = "id"))
     private Set<Regla> reglas = new HashSet<>();
-
-    @ManyToMany(mappedBy = "eventos")
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JsonIgnore
-    private Set<Estadistica> estadisticas = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -181,6 +185,31 @@ public class Evento implements Serializable {
         this.areaConocimientos = areaConocimientos;
     }
 
+    public Set<Estadistica> getEstadisticas() {
+        return estadisticas;
+    }
+
+    public Evento estadisticas(Set<Estadistica> estadisticas) {
+        this.estadisticas = estadisticas;
+        return this;
+    }
+
+    public Evento addEstadistica(Estadistica estadistica) {
+        this.estadisticas.add(estadistica);
+        estadistica.getEventos().add(this);
+        return this;
+    }
+
+    public Evento removeEstadistica(Estadistica estadistica) {
+        this.estadisticas.remove(estadistica);
+        estadistica.getEventos().remove(this);
+        return this;
+    }
+
+    public void setEstadisticas(Set<Estadistica> estadisticas) {
+        this.estadisticas = estadisticas;
+    }
+
     public Set<Area> getAreas() {
         return areas;
     }
@@ -229,31 +258,6 @@ public class Evento implements Serializable {
 
     public void setReglas(Set<Regla> reglas) {
         this.reglas = reglas;
-    }
-
-    public Set<Estadistica> getEstadisticas() {
-        return estadisticas;
-    }
-
-    public Evento estadisticas(Set<Estadistica> estadisticas) {
-        this.estadisticas = estadisticas;
-        return this;
-    }
-
-    public Evento addEstadistica(Estadistica estadistica) {
-        this.estadisticas.add(estadistica);
-        estadistica.getEventos().add(this);
-        return this;
-    }
-
-    public Evento removeEstadistica(Estadistica estadistica) {
-        this.estadisticas.remove(estadistica);
-        estadistica.getEventos().remove(this);
-        return this;
-    }
-
-    public void setEstadisticas(Set<Estadistica> estadisticas) {
-        this.estadisticas = estadisticas;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

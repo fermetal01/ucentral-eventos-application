@@ -23,9 +23,9 @@
       "ciudad": "Ciudad",
       "nodo": "Nodo",
       "areaConocimiento": "Area Conocimiento",
+      "estadistica": "Estadistica",
       "area": "Area",
-      "regla": "Regla",
-      "estadistica": "Estadistica"
+      "regla": "Regla"
     }
   }
 }

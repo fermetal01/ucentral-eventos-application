@@ -53,6 +53,28 @@
 
         <addPrimaryKey columnNames="evento_id, area_conocimiento_id" tableName="evento_area_conocimiento"/>
         
+        <createTable tableName="evento_area">
+            <column name="area_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="evento_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="evento_id, area_id" tableName="evento_area"/>
+        
+        <createTable tableName="evento_regla">
+            <column name="regla_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="evento_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="evento_id, regla_id" tableName="evento_regla"/>
+        
     </changeSet>
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
 

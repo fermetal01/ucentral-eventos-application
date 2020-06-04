@@ -111,7 +111,7 @@ export const AreaUpdate = (props: IAreaUpdateProps) => {
                   <option value="" key="0" />
                   {tipoAreas
                     ? tipoAreas.map(otherEntity => (
-                        <option value={otherEntity.id} key={otherEntity.id}>
+                        <option value={otherEntity.id} key={otherEntity.nombre}>
                           {otherEntity.id}
                         </option>
                       ))
@@ -133,7 +133,7 @@ export const AreaUpdate = (props: IAreaUpdateProps) => {
                   <option value="" key="0" />
                   {eventos
                     ? eventos.map(otherEntity => (
-                        <option value={otherEntity.id} key={otherEntity.id}>
+                        <option value={otherEntity.id} key={otherEntity.nombre}>
                           {otherEntity.id}
                         </option>
                       ))

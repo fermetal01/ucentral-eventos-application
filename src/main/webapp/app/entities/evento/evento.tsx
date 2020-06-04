@@ -57,6 +57,12 @@ export const Evento = (props: IEventoProps) => {
                 <th>
                   <Translate contentKey="ucentralEventosApplicationApp.evento.areaConocimiento">Area Conocimiento</Translate>
                 </th>
+                <th>
+                  <Translate contentKey="ucentralEventosApplicationApp.evento.area">Area</Translate>
+                </th>
+                <th>
+                  <Translate contentKey="ucentralEventosApplicationApp.evento.regla">Regla</Translate>
+                </th>
                 <th />
               </tr>
             </thead>
@@ -84,6 +90,26 @@ export const Evento = (props: IEventoProps) => {
                           <span key={j}>
                             <Link to={`area-conocimiento/${val.id}`}>{val.nombre}</Link>
                             {j === evento.areaConocimientos.length - 1 ? '' : ', '}
+                          </span>
+                        ))
+                      : null}
+                  </td>
+                  <td>
+                    {evento.areas
+                      ? evento.areas.map((val, j) => (
+                          <span key={j}>
+                            <Link to={`area/${val.id}`}>{val.nombre}</Link>
+                            {j === evento.areas.length - 1 ? '' : ', '}
+                          </span>
+                        ))
+                      : null}
+                  </td>
+                  <td>
+                    {evento.reglas
+                      ? evento.reglas.map((val, j) => (
+                          <span key={j}>
+                            <Link to={`regla/${val.id}`}>{val.nombre}</Link>
+                            {j === evento.reglas.length - 1 ? '' : ', '}
                           </span>
                         ))
                       : null}
