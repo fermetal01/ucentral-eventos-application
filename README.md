@@ -1,6 +1,15 @@
-# ucentralEventosApplication
+# Ucentral Eventos
 
-This application was generated using JHipster 6.8.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.8.0](https://www.jhipster.tech/documentation-archive/v6.8.0).
+Esta aplicación esta desarrollada como evidencia del prototipo para la materia de Practica de Ingenieria IV, es un proyecto realizado para crear mallas horarias para eventos teniendo en cuenta diferentes factores, como proyectos, evaluadores, areas de presentacion del proyecto y evaluaciones.
+
+## TÍTULO:
+IMPLEMENTACIÓN DE ALGORITMO METAHEURÍSTICO EN UN PROTOTIPO DEL SISTEMA DE ADMINISTRACIÓN DE ESPACIOS EN EVENTOS ACADÉMICOS PARA LA RED COLOMBIANA DE SEMILLEROS DE INVESTIGACIÓN REDCOLSI.
+
+
+## INTRODUCCIÓN:
+
+RedCOLSI  en cada periodo académico la dispone una diferentes encuentros, ferias o eventos en los cuales realiza una serie de presentaciones de los proyectos registrados en los semilleros de investigación, estos encuentros se encuentran categorizados como eventos internos, locales, departamentales y nacionales; Los eventos se encuentran apoyados generalmente por instituciones de educación superior, que para estos eventos presta sus locaciones para desarrollar dicho encuentro. Allí se encuentran una serie de espacios, como salones, auditorios, aulas múltiples, pasillos, cafeterías y demás. 
+Para cada uno de los eventos, registran los proyectos participantes a través de la plataforma mediante el Delegado Institucional quien evalúa y envía a participar al evento a los proyectos de los diferentes semilleros de investigación de la institución que representa. Además estos proyectos cuentan con una categorización específica dependiente del tipo de proyecto, subtipo de proyecto, área de conocimiento y subárea los cuales permiten asignar los evaluadores de la ponencia de acuerdo a su área de especialidad.
 
 ## Development
 
