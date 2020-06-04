@@ -8,6 +8,8 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A Semillero.
@@ -26,13 +28,16 @@ public class Semillero implements Serializable {
     @Column(name = "nombre")
     private String nombre;
 
-    @OneToOne
-    @JoinColumn(unique = true)
-    private Profesor profesor;
-
     @ManyToOne
     @JsonIgnoreProperties("semilleros")
     private Institucion institucion;
+
+    @ManyToMany
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    @JoinTable(name = "semillero_profesor",
+               joinColumns = @JoinColumn(name = "semillero_id", referencedColumnName = "id"),
+               inverseJoinColumns = @JoinColumn(name = "profesor_id", referencedColumnName = "id"))
+    private Set<Profesor> profesors = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -56,19 +61,6 @@ public class Semillero implements Serializable {
         this.nombre = nombre;
     }
 
-    public Profesor getProfesor() {
-        return profesor;
-    }
-
-    public Semillero profesor(Profesor profesor) {
-        this.profesor = profesor;
-        return this;
-    }
-
-    public void setProfesor(Profesor profesor) {
-        this.profesor = profesor;
-    }
-
     public Institucion getInstitucion() {
         return institucion;
     }
@@ -80,6 +72,31 @@ public class Semillero implements Serializable {
 
     public void setInstitucion(Institucion institucion) {
         this.institucion = institucion;
+    }
+
+    public Set<Profesor> getProfesors() {
+        return profesors;
+    }
+
+    public Semillero profesors(Set<Profesor> profesors) {
+        this.profesors = profesors;
+        return this;
+    }
+
+    public Semillero addProfesor(Profesor profesor) {
+        this.profesors.add(profesor);
+        profesor.getSemilleros().add(this);
+        return this;
+    }
+
+    public Semillero removeProfesor(Profesor profesor) {
+        this.profesors.remove(profesor);
+        profesor.getSemilleros().remove(this);
+        return this;
+    }
+
+    public void setProfesors(Set<Profesor> profesors) {
+        this.profesors = profesors;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

@@ -82,12 +82,13 @@ public class SemilleroResource {
     /**
      * {@code GET  /semilleros} : get all the semilleros.
      *
+     * @param eagerload flag to eager load entities from relationships (This is applicable for many-to-many).
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of semilleros in body.
      */
     @GetMapping("/semilleros")
-    public List<Semillero> getAllSemilleros() {
+    public List<Semillero> getAllSemilleros(@RequestParam(required = false, defaultValue = "false") boolean eagerload) {
         log.debug("REST request to get all Semilleros");
-        return semilleroRepository.findAll();
+        return semilleroRepository.findAllWithEagerRelationships();
     }
 
     /**
@@ -99,7 +100,7 @@ public class SemilleroResource {
     @GetMapping("/semilleros/{id}")
     public ResponseEntity<Semillero> getSemillero(@PathVariable Long id) {
         log.debug("REST request to get Semillero : {}", id);
-        Optional<Semillero> semillero = semilleroRepository.findById(id);
+        Optional<Semillero> semillero = semilleroRepository.findOneWithEagerRelationships(id);
         return ResponseUtil.wrapOrNotFound(semillero);
     }
 

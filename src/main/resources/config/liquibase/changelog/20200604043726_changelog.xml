@@ -1,0 +1,28 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="bfper (generated)" id="1591245458028-1">
+        <createTable tableName="semillero_profesor">
+            <column name="semillero_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="profesor_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="bfper (generated)" id="1591245458028-2">
+        <addForeignKeyConstraint baseColumnNames="semillero_id" baseTableName="semillero_profesor" constraintName="FKaitfp1lt189vrym5skiqsenu0" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="semillero" validate="true"/>
+    </changeSet>
+    <changeSet author="bfper (generated)" id="1591245458028-3">
+        <addForeignKeyConstraint baseColumnNames="profesor_id" baseTableName="semillero_profesor" constraintName="FKmi472riwt6wnpisoj4ouw742r" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="profesor" validate="true"/>
+    </changeSet>
+    <changeSet author="bfper (generated)" id="1591245458028-4">
+        <dropForeignKeyConstraint baseTableName="semillero" constraintName="fk_semillero_profesor_id"/>
+    </changeSet>
+    <changeSet author="bfper (generated)" id="1591245458028-5">
+        <dropUniqueConstraint constraintName="ux_semillero_profesor_id" tableName="semillero"/>
+    </changeSet>
+    <changeSet author="bfper (generated)" id="1591245458028-6">
+        <dropColumn columnName="profesor_id" tableName="semillero"/>
+    </changeSet>
+</databaseChangeLog>

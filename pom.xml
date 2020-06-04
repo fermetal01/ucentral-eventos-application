@@ -649,10 +649,10 @@
                         <changeLogFile>${project.basedir}/src/main/resources/config/liquibase/master.xml</changeLogFile>
                         <diffChangeLogFile>${project.basedir}/src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                         <driver>com.mysql.cj.jdbc.Driver</driver>
-                        <url>jdbc:mysql://localhost:3306/ucentralEventosApplication</url>
-                        <defaultSchemaName>ucentralEventosApplication</defaultSchemaName>
-                        <username>root</username>
-                        <password></password>
+                        <url>jdbc:mysql://localhost:3306/eventos</url>
+                        <defaultSchemaName>eventos</defaultSchemaName>
+                        <username>ucentral</username>
+                        <password>mySQL2020</password>
                         <referenceUrl>hibernate:spring:co.edu.ucentral.eventos.domain?dialect=org.hibernate.dialect.MySQL8Dialect&amp;hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&amp;hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy</referenceUrl>
                         <verbose>true</verbose>
                         <logging>debug</logging>

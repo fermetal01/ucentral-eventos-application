@@ -32,13 +32,22 @@ export const SemilleroDetail = (props: ISemilleroDetailProps) => {
           </dt>
           <dd>{semilleroEntity.nombre}</dd>
           <dt>
-            <Translate contentKey="ucentralEventosApplicationApp.semillero.profesor">Profesor</Translate>
-          </dt>
-          <dd>{semilleroEntity.profesor ? semilleroEntity.profesor.id : ''}</dd>
-          <dt>
             <Translate contentKey="ucentralEventosApplicationApp.semillero.institucion">Institucion</Translate>
           </dt>
           <dd>{semilleroEntity.institucion ? semilleroEntity.institucion.id : ''}</dd>
+          <dt>
+            <Translate contentKey="ucentralEventosApplicationApp.semillero.profesor">Profesor</Translate>
+          </dt>
+          <dd>
+            {semilleroEntity.profesors
+              ? semilleroEntity.profesors.map((val, i) => (
+                  <span key={val.id}>
+                    <a>{val.id}</a>
+                    {i === semilleroEntity.profesors.length - 1 ? '' : ', '}
+                  </span>
+                ))
+              : null}
+          </dd>
         </dl>
         <Button tag={Link} to="/semillero" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

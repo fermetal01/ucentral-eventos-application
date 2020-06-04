@@ -8,6 +8,8 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A Profesor.
@@ -30,9 +32,10 @@ public class Profesor implements Serializable {
     @JoinColumn(unique = true)
     private Persona persona;
 
-    @OneToOne(mappedBy = "profesor")
+    @ManyToMany(mappedBy = "profesors")
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     @JsonIgnore
-    private Semillero semillero;
+    private Set<Semillero> semilleros = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -69,17 +72,29 @@ public class Profesor implements Serializable {
         this.persona = persona;
     }
 
-    public Semillero getSemillero() {
-        return semillero;
+    public Set<Semillero> getSemilleros() {
+        return semilleros;
     }
 
-    public Profesor semillero(Semillero semillero) {
-        this.semillero = semillero;
+    public Profesor semilleros(Set<Semillero> semilleros) {
+        this.semilleros = semilleros;
         return this;
     }
 
-    public void setSemillero(Semillero semillero) {
-        this.semillero = semillero;
+    public Profesor addSemillero(Semillero semillero) {
+        this.semilleros.add(semillero);
+        semillero.getProfesors().add(this);
+        return this;
+    }
+
+    public Profesor removeSemillero(Semillero semillero) {
+        this.semilleros.remove(semillero);
+        semillero.getProfesors().remove(this);
+        return this;
+    }
+
+    public void setSemilleros(Set<Semillero> semilleros) {
+        this.semilleros = semilleros;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

@@ -19,9 +19,6 @@
             <column name="nombre" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="profesor_id" type="bigint">
-                <constraints unique="true" nullable="true" uniqueConstraintName="ux_semillero_profesor_id" />
-            </column>
             <column name="institucion_id" type="bigint">
                 <constraints nullable="true" />
             </column>
@@ -31,6 +28,17 @@
 
     <changeSet id="20200515000900-1-relations" author="jhipster">
 
+        <createTable tableName="semillero_profesor">
+            <column name="profesor_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="semillero_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="semillero_id, profesor_id" tableName="semillero_profesor"/>
+        
     </changeSet>
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
 

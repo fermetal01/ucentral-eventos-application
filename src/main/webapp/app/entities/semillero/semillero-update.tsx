@@ -7,10 +7,10 @@ import { Translate, translate, ICrudGetAction, ICrudGetAllAction, ICrudPutAction
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
-import { IProfesor } from 'app/shared/model/profesor.model';
-import { getEntities as getProfesors } from 'app/entities/profesor/profesor.reducer';
 import { IInstitucion } from 'app/shared/model/institucion.model';
 import { getEntities as getInstitucions } from 'app/entities/institucion/institucion.reducer';
+import { IProfesor } from 'app/shared/model/profesor.model';
+import { getEntities as getProfesors } from 'app/entities/profesor/profesor.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './semillero.reducer';
 import { ISemillero } from 'app/shared/model/semillero.model';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
@@ -19,11 +19,11 @@ import { mapIdList } from 'app/shared/util/entity-utils';
 export interface ISemilleroUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export const SemilleroUpdate = (props: ISemilleroUpdateProps) => {
-  const [profesorId, setProfesorId] = useState('0');
+  const [idsprofesor, setIdsprofesor] = useState([]);
   const [institucionId, setInstitucionId] = useState('0');
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
-  const { semilleroEntity, profesors, institucions, loading, updating } = props;
+  const { semilleroEntity, institucions, profesors, loading, updating } = props;
 
   const handleClose = () => {
     props.history.push('/semillero');
@@ -36,8 +36,8 @@ export const SemilleroUpdate = (props: ISemilleroUpdateProps) => {
       props.getEntity(props.match.params.id);
     }
 
-    props.getProfesors();
     props.getInstitucions();
+    props.getProfesors();
   }, []);
 
   useEffect(() => {
@@ -50,7 +50,8 @@ export const SemilleroUpdate = (props: ISemilleroUpdateProps) => {
     if (errors.length === 0) {
       const entity = {
         ...semilleroEntity,
-        ...values
+        ...values,
+        profesors: mapIdList(values.profesors)
       };
 
       if (isNew) {
@@ -91,13 +92,13 @@ export const SemilleroUpdate = (props: ISemilleroUpdateProps) => {
                 <AvField id="semillero-nombre" type="text" name="nombre" />
               </AvGroup>
               <AvGroup>
-                <Label for="semillero-profesor">
-                  <Translate contentKey="ucentralEventosApplicationApp.semillero.profesor">Profesor</Translate>
+                <Label for="semillero-institucion">
+                  <Translate contentKey="ucentralEventosApplicationApp.semillero.institucion">Institucion</Translate>
                 </Label>
-                <AvInput id="semillero-profesor" type="select" className="form-control" name="profesor.id">
+                <AvInput id="semillero-institucion" type="select" className="form-control" name="institucion.id">
                   <option value="" key="0" />
-                  {profesors
-                    ? profesors.map(otherEntity => (
+                  {institucions
+                    ? institucions.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
                           {otherEntity.id}
                         </option>
@@ -106,13 +107,20 @@ export const SemilleroUpdate = (props: ISemilleroUpdateProps) => {
                 </AvInput>
               </AvGroup>
               <AvGroup>
-                <Label for="semillero-institucion">
-                  <Translate contentKey="ucentralEventosApplicationApp.semillero.institucion">Institucion</Translate>
+                <Label for="semillero-profesor">
+                  <Translate contentKey="ucentralEventosApplicationApp.semillero.profesor">Profesor</Translate>
                 </Label>
-                <AvInput id="semillero-institucion" type="select" className="form-control" name="institucion.id">
+                <AvInput
+                  id="semillero-profesor"
+                  type="select"
+                  multiple
+                  className="form-control"
+                  name="profesors"
+                  value={semilleroEntity.profesors && semilleroEntity.profesors.map(e => e.id)}
+                >
                   <option value="" key="0" />
-                  {institucions
-                    ? institucions.map(otherEntity => (
+                  {profesors
+                    ? profesors.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
                           {otherEntity.id}
                         </option>
@@ -142,8 +150,8 @@ export const SemilleroUpdate = (props: ISemilleroUpdateProps) => {
 };
 
 const mapStateToProps = (storeState: IRootState) => ({
-  profesors: storeState.profesor.entities,
   institucions: storeState.institucion.entities,
+  profesors: storeState.profesor.entities,
   semilleroEntity: storeState.semillero.entity,
   loading: storeState.semillero.loading,
   updating: storeState.semillero.updating,
@@ -151,8 +159,8 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
-  getProfesors,
   getInstitucions,
+  getProfesors,
   getEntity,
   updateEntity,
   createEntity,

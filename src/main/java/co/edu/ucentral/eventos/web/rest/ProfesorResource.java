@@ -17,8 +17,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 /**
  * REST controller for managing {@link co.edu.ucentral.eventos.domain.Profesor}.
@@ -84,18 +82,10 @@ public class ProfesorResource {
     /**
      * {@code GET  /profesors} : get all the profesors.
      *
-     * @param filter the filter of the request.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of profesors in body.
      */
     @GetMapping("/profesors")
-    public List<Profesor> getAllProfesors(@RequestParam(required = false) String filter) {
-        if ("semillero-is-null".equals(filter)) {
-            log.debug("REST request to get all Profesors where semillero is null");
-            return StreamSupport
-                .stream(profesorRepository.findAll().spliterator(), false)
-                .filter(profesor -> profesor.getSemillero() == null)
-                .collect(Collectors.toList());
-        }
+    public List<Profesor> getAllProfesors() {
         log.debug("REST request to get all Profesors");
         return profesorRepository.findAll();
     }

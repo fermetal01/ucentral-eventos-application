@@ -40,10 +40,10 @@ export const Semillero = (props: ISemilleroProps) => {
                   <Translate contentKey="ucentralEventosApplicationApp.semillero.nombre">Nombre</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="ucentralEventosApplicationApp.semillero.profesor">Profesor</Translate>
+                  <Translate contentKey="ucentralEventosApplicationApp.semillero.institucion">Institucion</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="ucentralEventosApplicationApp.semillero.institucion">Institucion</Translate>
+                  <Translate contentKey="ucentralEventosApplicationApp.semillero.profesor">Profesor</Translate>
                 </th>
                 <th />
               </tr>
@@ -57,9 +57,18 @@ export const Semillero = (props: ISemilleroProps) => {
                     </Button>
                   </td>
                   <td>{semillero.nombre}</td>
-                  <td>{semillero.profesor ? <Link to={`profesor/${semillero.profesor.id}`}>{semillero.profesor.persona.nombres+" "+semillero.profesor.persona.apellidos}</Link> : ''}</td>
                   <td>
                     {semillero.institucion ? <Link to={`institucion/${semillero.institucion.id}`}>{semillero.institucion.nombre}</Link> : ''}
+                  </td>
+                  <td>
+                    {semillero.profesors
+                      ? semillero.profesors.map((val, j) => (
+                          <span key={j}>
+                            <Link to={`profesor/${val.id}`}>{val.persona.nombres+" "+val.persona.apellidos}</Link>
+                            {j === semillero.profesors.length - 1 ? '' : ', '}
+                          </span>
+                        ))
+                      : null}
                   </td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

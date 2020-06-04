@@ -5,7 +5,7 @@ export interface IProfesor {
   id?: number;
   area?: string;
   persona?: IPersona;
-  semillero?: ISemillero;
+  semilleros?: ISemillero[];
 }
 
 export const defaultValue: Readonly<IProfesor> = {};

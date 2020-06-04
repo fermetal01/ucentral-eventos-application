@@ -63,8 +63,8 @@ describe('Semillero e2e test', () => {
     await semilleroComponentsPage.createButton.click();
     await semilleroUpdatePage.setNombreInput('nombre');
     expect(await semilleroUpdatePage.getNombreInput()).to.match(/nombre/);
-    await semilleroUpdatePage.profesorSelectLastOption();
     await semilleroUpdatePage.institucionSelectLastOption();
+    // semilleroUpdatePage.profesorSelectLastOption();
     await waitUntilDisplayed(semilleroUpdatePage.saveButton);
     await semilleroUpdatePage.save();
     await waitUntilHidden(semilleroUpdatePage.saveButton);

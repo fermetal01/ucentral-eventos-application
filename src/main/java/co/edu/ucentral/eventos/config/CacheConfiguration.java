@@ -81,6 +81,8 @@ public class CacheConfiguration {
             createCache(cm, co.edu.ucentral.eventos.domain.Regla.class.getName() + ".eventos");
             createCache(cm, co.edu.ucentral.eventos.domain.Estadistica.class.getName());
             createCache(cm, co.edu.ucentral.eventos.domain.Estadistica.class.getName() + ".eventos");
+            createCache(cm, co.edu.ucentral.eventos.domain.Semillero.class.getName() + ".profesors");
+            createCache(cm, co.edu.ucentral.eventos.domain.Profesor.class.getName() + ".semilleros");
             // jhipster-needle-ehcache-add-entry
         };
     }

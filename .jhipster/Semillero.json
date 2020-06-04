@@ -8,19 +8,19 @@
     ],
     "relationships": [
         {
-            "relationshipType": "one-to-one",
-            "otherEntityName": "profesor",
-            "otherEntityRelationshipName": "semillero",
-            "relationshipName": "profesor",
-            "otherEntityField": "id",
-            "ownerSide": true
-        },
-        {
             "relationshipType": "many-to-one",
             "otherEntityName": "institucion",
             "otherEntityRelationshipName": "semillero",
             "relationshipName": "institucion",
             "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "profesor",
+            "otherEntityName": "profesor",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "semillero"
         }
     ],
     "changelogDate": "20200515000900",
@@ -33,5 +33,7 @@
     "readOnly": false,
     "embedded": false,
     "clientRootFolder": "",
-    "applications": "*"
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "sql"
 }

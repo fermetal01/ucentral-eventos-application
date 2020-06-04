@@ -8,17 +8,23 @@
     -->
     <changeSet id="20200515000900-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="profesor_id"
-                                 baseTableName="semillero"
-                                 constraintName="fk_semillero_profesor_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="profesor"/>
-
         <addForeignKeyConstraint baseColumnNames="institucion_id"
                                  baseTableName="semillero"
                                  constraintName="fk_semillero_institucion_id"
                                  referencedColumnNames="id"
                                  referencedTableName="institucion"/>
 
+        <addForeignKeyConstraint baseColumnNames="semillero_id"
+                                 baseTableName="semillero_profesor"
+                                 constraintName="fk_semillero_profesor_semillero_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="semillero"/>
+
+        <addForeignKeyConstraint baseColumnNames="profesor_id"
+                                 baseTableName="semillero_profesor"
+                                 constraintName="fk_semillero_profesor_profesor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profesor"/>
+        
     </changeSet>
 </databaseChangeLog>

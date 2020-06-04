@@ -17,8 +17,8 @@
         "title": "Semillero"
       },
       "nombre": "Nombre",
-      "profesor": "Profesor",
-      "institucion": "Institucion"
+      "institucion": "Institucion",
+      "profesor": "Profesor"
     }
   }
 }
