@@ -49,15 +49,15 @@ export const InscripcionDetail = (props: IInscripcionDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.inscripcion.evento">Evento</Translate>
           </dt>
-          <dd>{inscripcionEntity.evento ? inscripcionEntity.evento.id : ''}</dd>
+          <dd>{inscripcionEntity.evento ? inscripcionEntity.evento.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.inscripcion.proyecto">Proyecto</Translate>
           </dt>
-          <dd>{inscripcionEntity.proyecto ? inscripcionEntity.proyecto.id : ''}</dd>
+          <dd>{inscripcionEntity.proyecto ? inscripcionEntity.proyecto.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.inscripcion.delegado">Delegado</Translate>
           </dt>
-          <dd>{inscripcionEntity.delegado ? inscripcionEntity.delegado.id : ''}</dd>
+          <dd>{inscripcionEntity.delegado ? inscripcionEntity.delegado.persona.nombres + " " + inscripcionEntity.delegado.persona.apellidos : ''}</dd>
         </dl>
         <Button tag={Link} to="/inscripcion" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

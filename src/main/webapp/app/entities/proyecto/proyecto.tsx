@@ -74,7 +74,7 @@ export const Proyecto = (props: IProyectoProps) => {
                   </td>
                   <td>
                     {proyecto.areaConocimiento ? (
-                      <Link to={`area-conocimiento/${proyecto.areaConocimiento.id}`}>{proyecto.areaConocimiento.nombre}</Link>
+                      <Link to={`area-conocimiento/${proyecto.areaConocimiento.id}`}>{proyecto.areaConocimiento.padre ? proyecto.areaConocimiento.padre.nombre+" - " : '' + proyecto.areaConocimiento.nombre}</Link>
                     ) : (
                       ''
                     )}

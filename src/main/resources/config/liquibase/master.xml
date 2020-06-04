@@ -38,7 +38,6 @@
     <include file="config/liquibase/changelog/20200515002000_added_entity_Evaluador.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200515002100_added_entity_Regla.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200515002200_added_entity_Estadistica.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20200604045507_added_entity_Categoria.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20200514235900_added_entity_constraints_Persona.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200515000100_added_entity_constraints_UsuarioUcentral.xml" relativeToChangelogFile="false"/>

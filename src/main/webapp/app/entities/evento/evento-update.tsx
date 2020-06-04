@@ -151,7 +151,7 @@ export const EventoUpdate = (props: IEventoUpdateProps) => {
                   {ciudads
                     ? ciudads.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -166,7 +166,7 @@ export const EventoUpdate = (props: IEventoUpdateProps) => {
                   {nodos
                     ? nodos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -188,7 +188,7 @@ export const EventoUpdate = (props: IEventoUpdateProps) => {
                   {areaConocimientos
                     ? areaConocimientos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}

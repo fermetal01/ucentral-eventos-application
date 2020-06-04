@@ -44,15 +44,15 @@ export const PonenciaDetail = (props: IPonenciaDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.ponencia.area">Area</Translate>
           </dt>
-          <dd>{ponenciaEntity.area ? ponenciaEntity.area.id : ''}</dd>
+          <dd>{ponenciaEntity.area ? ponenciaEntity.area.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.ponencia.evento">Evento</Translate>
           </dt>
-          <dd>{ponenciaEntity.evento ? ponenciaEntity.evento.id : ''}</dd>
+          <dd>{ponenciaEntity.evento ? ponenciaEntity.evento.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.ponencia.proyecto">Proyecto</Translate>
           </dt>
-          <dd>{ponenciaEntity.proyecto ? ponenciaEntity.proyecto.id : ''}</dd>
+          <dd>{ponenciaEntity.proyecto ? ponenciaEntity.proyecto.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.ponencia.evaluador">Evaluador</Translate>
           </dt>

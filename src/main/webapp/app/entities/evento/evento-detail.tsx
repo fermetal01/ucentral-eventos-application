@@ -56,11 +56,11 @@ export const EventoDetail = (props: IEventoDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.evento.ciudad">Ciudad</Translate>
           </dt>
-          <dd>{eventoEntity.ciudad ? eventoEntity.ciudad.id : ''}</dd>
+          <dd>{eventoEntity.ciudad ? eventoEntity.ciudad.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.evento.nodo">Nodo</Translate>
           </dt>
-          <dd>{eventoEntity.nodo ? eventoEntity.nodo.id : ''}</dd>
+          <dd>{eventoEntity.nodo ? eventoEntity.nodo.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.evento.areaConocimiento">Area Conocimiento</Translate>
           </dt>
@@ -68,7 +68,7 @@ export const EventoDetail = (props: IEventoDetailProps) => {
             {eventoEntity.areaConocimientos
               ? eventoEntity.areaConocimientos.map((val, i) => (
                   <span key={val.id}>
-                    <a>{val.id}</a>
+                    <a>{val.nombre}</a>
                     {i === eventoEntity.areaConocimientos.length - 1 ? '' : ', '}
                   </span>
                 ))
@@ -86,6 +86,19 @@ export const EventoDetail = (props: IEventoDetailProps) => {
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>
+          </span>
+        </Button>
+        &nbsp;
+        <Button tag={Link} to={`/inscripcions/`} replace color="success">
+          <FontAwesomeIcon icon="address-book" />{' '}
+          <span className="d-none d-md-inline">
+            <Translate contentKey="ucentralEventosApplicationApp.inscripcion.home.title">Inscripcion</Translate>
+          </span>
+        </Button>
+        <Button tag={Link} to={`/inscripcions/`} replace color="secondary">
+          <FontAwesomeIcon icon="calendar" />{' '}
+          <span className="d-none d-md-inline">
+            <Translate contentKey="ucentralEventosApplicationApp.ponencia.home.title">Malla</Translate>
           </span>
         </Button>
       </Col>
