@@ -40,7 +40,7 @@ export const ProgramaDetail = (props: IProgramaDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.programa.institucion">Institucion</Translate>
           </dt>
-          <dd>{programaEntity.institucion ? programaEntity.institucion.id : ''}</dd>
+          <dd>{programaEntity.institucion ? programaEntity.institucion.nombre : ''}</dd>
         </dl>
         <Button tag={Link} to="/programa" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

@@ -106,7 +106,7 @@ export const AreaConocimientoUpdate = (props: IAreaConocimientoUpdateProps) => {
                   {areaConocimientos
                     ? areaConocimientos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}

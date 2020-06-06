@@ -42,15 +42,15 @@ export const ProyectoDetail = (props: IProyectoDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.proyecto.categoria">Categoria</Translate>
           </dt>
-          <dd>{proyectoEntity.categoria ? proyectoEntity.categoria.id : ''}</dd>
+          <dd>{proyectoEntity.categoria ? proyectoEntity.categoria.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.proyecto.areaConocimiento">Area Conocimiento</Translate>
           </dt>
-          <dd>{proyectoEntity.areaConocimiento ? proyectoEntity.areaConocimiento.id : ''}</dd>
+          <dd>{proyectoEntity.areaConocimiento ? proyectoEntity.areaConocimiento.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.proyecto.semillero">Semillero</Translate>
           </dt>
-          <dd>{proyectoEntity.semillero ? proyectoEntity.semillero.id : ''}</dd>
+          <dd>{proyectoEntity.semillero ? proyectoEntity.semillero.institucion.nombre+" - "+proyectoEntity.semillero.nombre : ''}</dd>
         </dl>
         <Button tag={Link} to="/proyecto" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

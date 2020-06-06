@@ -40,7 +40,7 @@ export const EvaluadorDetail = (props: IEvaluadorDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.evaluador.persona">Persona</Translate>
           </dt>
-          <dd>{evaluadorEntity.persona ? evaluadorEntity.persona.id : ''}</dd>
+          <dd>{evaluadorEntity.persona ? evaluadorEntity.persona.nombres+" "+evaluadorEntity.persona.apellidos : ''}</dd>
         </dl>
         <Button tag={Link} to="/evaluador" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

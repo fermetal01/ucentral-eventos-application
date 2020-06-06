@@ -95,7 +95,7 @@ export const CiudadUpdate = (props: ICiudadUpdateProps) => {
                   {departamentos
                     ? departamentos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}

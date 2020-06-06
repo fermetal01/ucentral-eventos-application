@@ -41,11 +41,11 @@ export const EvaluacionDetail = (props: IEvaluacionDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.evaluacion.ponencia">Ponencia</Translate>
           </dt>
-          <dd>{evaluacionEntity.ponencia ? evaluacionEntity.ponencia.id : ''}</dd>
+          <dd>{evaluacionEntity.ponencia ? evaluacionEntity.ponencia.id+"-"+evaluacionEntity.ponencia.proyecto : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.evaluacion.evaluador">Evaluador</Translate>
           </dt>
-          <dd>{evaluacionEntity.evaluador ? evaluacionEntity.evaluador.id : ''}</dd>
+          <dd>{evaluacionEntity.evaluador ? evaluacionEntity.evaluador.persona.nombres+" "+ evaluacionEntity.evaluador.persona.apellidos : ''}</dd>
         </dl>
         <Button tag={Link} to="/evaluacion" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

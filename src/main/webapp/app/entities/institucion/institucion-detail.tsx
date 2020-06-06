@@ -49,11 +49,11 @@ export const InstitucionDetail = (props: IInstitucionDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.institucion.ciudad">Ciudad</Translate>
           </dt>
-          <dd>{institucionEntity.ciudad ? institucionEntity.ciudad.id : ''}</dd>
+          <dd>{institucionEntity.ciudad ? institucionEntity.ciudad.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.institucion.nodo">Nodo</Translate>
           </dt>
-          <dd>{institucionEntity.nodo ? institucionEntity.nodo.id : ''}</dd>
+          <dd>{institucionEntity.nodo ? institucionEntity.nodo.nombre : ''}</dd>
         </dl>
         <Button tag={Link} to="/institucion" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

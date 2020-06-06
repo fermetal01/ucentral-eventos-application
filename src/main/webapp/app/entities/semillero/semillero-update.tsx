@@ -100,7 +100,7 @@ export const SemilleroUpdate = (props: ISemilleroUpdateProps) => {
                   {institucions
                     ? institucions.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -122,7 +122,7 @@ export const SemilleroUpdate = (props: ISemilleroUpdateProps) => {
                   {profesors
                     ? profesors.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.persona.nombres+" "+otherEntity.persona.apellidos}
                         </option>
                       ))
                     : null}

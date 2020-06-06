@@ -52,11 +52,11 @@ export const PersonaDetail = (props: IPersonaDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.persona.ciudad">Ciudad</Translate>
           </dt>
-          <dd>{personaEntity.ciudad ? personaEntity.ciudad.id : ''}</dd>
+          <dd>{personaEntity.ciudad ? personaEntity.ciudad.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.persona.tipoIdentificacion">Tipo Identificacion</Translate>
           </dt>
-          <dd>{personaEntity.tipoIdentificacion ? personaEntity.tipoIdentificacion.id : ''}</dd>
+          <dd>{personaEntity.tipoIdentificacion ? personaEntity.tipoIdentificacion.nombres : ''}</dd>
         </dl>
         <Button tag={Link} to="/persona" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

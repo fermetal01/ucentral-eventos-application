@@ -102,7 +102,7 @@ export const DelegadoInstitucionalUpdate = (props: IDelegadoInstitucionalUpdateP
                   {personas
                     ? personas.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombres+" "+otherEntity.apellidos}
                         </option>
                       ))
                     : null}
@@ -124,7 +124,7 @@ export const DelegadoInstitucionalUpdate = (props: IDelegadoInstitucionalUpdateP
                   {institucions
                     ? institucions.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}

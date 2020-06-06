@@ -148,7 +148,7 @@ export const PersonaUpdate = (props: IPersonaUpdateProps) => {
                   {ciudads
                     ? ciudads.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -163,7 +163,7 @@ export const PersonaUpdate = (props: IPersonaUpdateProps) => {
                   {tipoIdentificacions
                     ? tipoIdentificacions.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombres}
                         </option>
                       ))
                     : null}

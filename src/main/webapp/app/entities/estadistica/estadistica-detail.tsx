@@ -57,7 +57,7 @@ export const EstadisticaDetail = (props: IEstadisticaDetailProps) => {
             {estadisticaEntity.eventos
               ? estadisticaEntity.eventos.map((val, i) => (
                   <span key={val.id}>
-                    <a>{val.id}</a>
+                    <a>{val.nombre}</a>
                     {i === estadisticaEntity.eventos.length - 1 ? '' : ', '}
                   </span>
                 ))

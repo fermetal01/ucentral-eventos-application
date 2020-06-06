@@ -56,7 +56,7 @@ export const ReglaDetail = (props: IReglaDetailProps) => {
             {reglaEntity.eventos
               ? reglaEntity.eventos.map((val, i) => (
                   <span key={val.id}>
-                    <a>{val.id}</a>
+                    <a>{val.nombre}</a>
                     {i === reglaEntity.eventos.length - 1 ? '' : ', '}
                   </span>
                 ))

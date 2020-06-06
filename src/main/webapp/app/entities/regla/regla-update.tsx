@@ -121,7 +121,7 @@ export const ReglaUpdate = (props: IReglaUpdateProps) => {
                   {eventos
                     ? eventos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}

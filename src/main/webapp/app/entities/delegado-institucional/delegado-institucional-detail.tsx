@@ -35,7 +35,7 @@ export const DelegadoInstitucionalDetail = (props: IDelegadoInstitucionalDetailP
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.delegadoInstitucional.persona">Persona</Translate>
           </dt>
-          <dd>{delegadoInstitucionalEntity.persona ? delegadoInstitucionalEntity.persona.nombres : ''}</dd>
+          <dd>{delegadoInstitucionalEntity.persona ? delegadoInstitucionalEntity.persona.nombres +" "+delegadoInstitucionalEntity.persona.apellidos : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.delegadoInstitucional.institucion">Institucion</Translate>
           </dt>

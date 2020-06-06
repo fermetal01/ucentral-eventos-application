@@ -104,7 +104,7 @@ export const EstudianteUpdate = (props: IEstudianteUpdateProps) => {
                   {personas
                     ? personas.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombres+" "+otherEntity.apellidos}
                         </option>
                       ))
                     : null}
@@ -119,7 +119,7 @@ export const EstudianteUpdate = (props: IEstudianteUpdateProps) => {
                   {programas
                     ? programas.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -141,7 +141,7 @@ export const EstudianteUpdate = (props: IEstudianteUpdateProps) => {
                   {proyectos
                     ? proyectos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}

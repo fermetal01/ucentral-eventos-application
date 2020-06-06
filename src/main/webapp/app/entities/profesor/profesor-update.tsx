@@ -99,7 +99,7 @@ export const ProfesorUpdate = (props: IProfesorUpdateProps) => {
                   {personas
                     ? personas.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombres+" "+otherEntity.apellidos}
                         </option>
                       ))
                     : null}

@@ -34,7 +34,7 @@ export const CiudadDetail = (props: ICiudadDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.ciudad.departamento">Departamento</Translate>
           </dt>
-          <dd>{ciudadEntity.departamento ? ciudadEntity.departamento.id : ''}</dd>
+          <dd>{ciudadEntity.departamento ? ciudadEntity.departamento.nombre : ''}</dd>
         </dl>
         <Button tag={Link} to="/ciudad" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

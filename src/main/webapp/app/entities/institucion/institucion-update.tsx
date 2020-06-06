@@ -126,7 +126,7 @@ export const InstitucionUpdate = (props: IInstitucionUpdateProps) => {
                   {ciudads
                     ? ciudads.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -141,7 +141,7 @@ export const InstitucionUpdate = (props: IInstitucionUpdateProps) => {
                   {nodos
                     ? nodos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}

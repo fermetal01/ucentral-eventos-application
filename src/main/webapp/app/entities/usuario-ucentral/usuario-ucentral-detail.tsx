@@ -35,11 +35,11 @@ export const UsuarioUcentralDetail = (props: IUsuarioUcentralDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.usuarioUcentral.user">User</Translate>
           </dt>
-          <dd>{usuarioUcentralEntity.user ? usuarioUcentralEntity.user.id : ''}</dd>
+          <dd>{usuarioUcentralEntity.user ? usuarioUcentralEntity.user.login : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.usuarioUcentral.persona">Persona</Translate>
           </dt>
-          <dd>{usuarioUcentralEntity.persona ? usuarioUcentralEntity.persona.id : ''}</dd>
+          <dd>{usuarioUcentralEntity.persona ? usuarioUcentralEntity.persona.nombres+" "+usuarioUcentralEntity.persona.apellidos : ''}</dd>
         </dl>
         <Button tag={Link} to="/usuario-ucentral" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

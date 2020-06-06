@@ -102,7 +102,7 @@ export const UsuarioUcentralUpdate = (props: IUsuarioUcentralUpdateProps) => {
                   {users
                     ? users.map((otherEntity, index) => (
                         <option value={index} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.login}
                         </option>
                       ))
                     : null}
@@ -117,7 +117,7 @@ export const UsuarioUcentralUpdate = (props: IUsuarioUcentralUpdateProps) => {
                   {personas
                     ? personas.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombres+" "+otherEntity.apellidos}
                         </option>
                       ))
                     : null}

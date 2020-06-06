@@ -41,7 +41,7 @@ export const AreaConocimientoDetail = (props: IAreaConocimientoDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.areaConocimiento.padre">Padre</Translate>
           </dt>
-          <dd>{areaConocimientoEntity.padre ? areaConocimientoEntity.padre.id : ''}</dd>
+          <dd>{areaConocimientoEntity.padre ? areaConocimientoEntity.padre.nombre : ''}</dd>
         </dl>
         <Button tag={Link} to="/area-conocimiento" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

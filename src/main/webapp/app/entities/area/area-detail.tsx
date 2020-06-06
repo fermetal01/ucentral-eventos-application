@@ -46,7 +46,7 @@ export const AreaDetail = (props: IAreaDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.area.tipoArea">Tipo Area</Translate>
           </dt>
-          <dd>{areaEntity.tipoArea ? areaEntity.tipoArea.id : ''}</dd>
+          <dd>{areaEntity.tipoArea ? areaEntity.tipoArea.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.area.evento">Evento</Translate>
           </dt>
@@ -54,7 +54,7 @@ export const AreaDetail = (props: IAreaDetailProps) => {
             {areaEntity.eventos
               ? areaEntity.eventos.map((val, i) => (
                   <span key={val.id}>
-                    <a>{val.id}</a>
+                    <a>{val.nombre}</a>
                     {i === areaEntity.eventos.length - 1 ? '' : ', '}
                   </span>
                 ))

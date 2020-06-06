@@ -34,7 +34,7 @@ export const ProfesorDetail = (props: IProfesorDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.profesor.persona">Persona</Translate>
           </dt>
-          <dd>{profesorEntity.persona ? profesorEntity.persona.id : ''}</dd>
+          <dd>{profesorEntity.persona ? profesorEntity.persona.nombres+" "+profesorEntity.persona.apellidos : ''}</dd>
         </dl>
         <Button tag={Link} to="/profesor" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

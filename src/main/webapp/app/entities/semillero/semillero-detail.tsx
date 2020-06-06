@@ -34,7 +34,7 @@ export const SemilleroDetail = (props: ISemilleroDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.semillero.institucion">Institucion</Translate>
           </dt>
-          <dd>{semilleroEntity.institucion ? semilleroEntity.institucion.id : ''}</dd>
+          <dd>{semilleroEntity.institucion ? semilleroEntity.institucion.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.semillero.profesor">Profesor</Translate>
           </dt>
@@ -42,7 +42,7 @@ export const SemilleroDetail = (props: ISemilleroDetailProps) => {
             {semilleroEntity.profesors
               ? semilleroEntity.profesors.map((val, i) => (
                   <span key={val.id}>
-                    <a>{val.id}</a>
+                    <a>{val.persona.nombres+" "+val.persona.apellidos}</a>
                     {i === semilleroEntity.profesors.length - 1 ? '' : ', '}
                   </span>
                 ))

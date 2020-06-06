@@ -66,6 +66,7 @@ export const Home = (props: IHomeProp) => {
       </Col>
       <Col md="3">
         <img src="content/images/UniversidadCentral.png" alt="Logo" />
+        <img src="content/images/redcolsi.png" alt="Logo" />
       </Col>
     </Row>
   );

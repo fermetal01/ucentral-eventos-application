@@ -35,11 +35,11 @@ export const EstudianteDetail = (props: IEstudianteDetailProps) => {
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.estudiante.persona">Persona</Translate>
           </dt>
-          <dd>{estudianteEntity.persona ? estudianteEntity.persona.id : ''}</dd>
+          <dd>{estudianteEntity.persona ? estudianteEntity.persona.nombres+" "+estudianteEntity.persona.apellidos : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.estudiante.programa">Programa</Translate>
           </dt>
-          <dd>{estudianteEntity.programa ? estudianteEntity.programa.id : ''}</dd>
+          <dd>{estudianteEntity.programa ? estudianteEntity.programa.nombre : ''}</dd>
           <dt>
             <Translate contentKey="ucentralEventosApplicationApp.estudiante.proyecto">Proyecto</Translate>
           </dt>
@@ -47,7 +47,7 @@ export const EstudianteDetail = (props: IEstudianteDetailProps) => {
             {estudianteEntity.proyectos
               ? estudianteEntity.proyectos.map((val, i) => (
                   <span key={val.id}>
-                    <a>{val.id}</a>
+                    <a>{val.nombre}</a>
                     {i === estudianteEntity.proyectos.length - 1 ? '' : ', '}
                   </span>
                 ))

@@ -122,7 +122,7 @@ export const ProyectoUpdate = (props: IProyectoUpdateProps) => {
                   {proyectoCategorias
                     ? proyectoCategorias.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -137,7 +137,7 @@ export const ProyectoUpdate = (props: IProyectoUpdateProps) => {
                   {areaConocimientos
                     ? areaConocimientos.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.nombre}
                         </option>
                       ))
                     : null}
@@ -152,7 +152,7 @@ export const ProyectoUpdate = (props: IProyectoUpdateProps) => {
                   {semilleros
                     ? semilleros.map(otherEntity => (
                         <option value={otherEntity.id} key={otherEntity.id}>
-                          {otherEntity.id}
+                          {otherEntity.institucion.nombre+" - "+otherEntity.nombre}
                         </option>
                       ))
                     : null}
