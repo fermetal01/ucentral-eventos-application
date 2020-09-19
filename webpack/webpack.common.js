@@ -122,7 +122,8 @@ module.exports = options => ({
     new HtmlWebpackPlugin({
       template: './src/main/webapp/index.html',
       chunksSortMode: 'dependency',
-      inject: 'body'
+      inject: 'body',
+      base: '/admin/'
     }),
     new BaseHrefWebpackPlugin({ baseHref: '/' }),
     new MergeJsonWebpackPlugin({

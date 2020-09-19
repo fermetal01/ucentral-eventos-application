@@ -9,7 +9,7 @@ import { NavDropdown } from './menu-components';
 export const FlowMenu = props => (
   <NavDropdown
     icon="th-list"
-    name={translate('global.menu.entities.main')}
+    name={"Flujo"}
     id="entity-menu"
     style={{ maxHeight: '80vh', overflow: 'auto' }}
   >
